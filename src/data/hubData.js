@@ -3,7 +3,10 @@
  * Verified details from official launch flyer, location maps, and Google Form.
  */
 
-export const GOOGLE_FORM_URL = "https://forms.gle/ECdK7qZhB1R6WVP29";
+export const STUDENT_REGISTRATION_FORM_URL = "https://forms.gle/wgLcag7Eg7Hw3PVZ9";
+export const FACULTY_REGISTRATION_FORM_URL = "https://forms.gle/ECdK7qZhB1R6WVP29";
+export const CLASSROOM_RENTAL_FORM_URL = "https://forms.gle/b3M4xQ1Vjqx4WypB7";
+export const GOOGLE_FORM_URL = STUDENT_REGISTRATION_FORM_URL;
 export const GOOGLE_MAPS_URL = "https://maps.app.goo.gl/2ySS4EZ3b8gARGgz8?g_st=ac";
 
 export const businessInfo = {
@@ -16,8 +19,11 @@ export const businessInfo = {
   heroPunchline: "Learn Better, Score Higher!",
   missionTagline: "Your Success is Our Mission!",
   futureTagline: "Right Guidance Today... A Brighter Future Tomorrow!",
+  subTagline: "Better Learning, Better Grades, Bigger Dreams!",
+  conceptHeadline: "Struggling to Understand Concepts? You're Not Alone!",
+  classroomHeadline: "Looking for Class Rooms? Your Search Ends Here!",
   supportingText:
-    "An Education & Career Development initiative expanding Teaching, Training, Skill Development & Placement activities across Higher School (9th & 10th), Intermediate (11th & 12th CBSE, ICSE, TG State Board), all Higher Studies & Competitive exams in Hyderabad.",
+    "Get the right guidance from experienced Teachers, Instructors and Subject Experts at SILT Hub — for better understanding, higher scores and a successful career!",
   category: "Education & Career Development Hub",
   
   // Contact & Channels
@@ -26,10 +32,13 @@ export const businessInfo = {
   phoneTel: "tel:9849228757",
   whatsappNumber: "919849228757",
   whatsappLink:
-    "https://wa.me/919849228757?text=Hi%20SILT%20Hub%2C%20I%20would%20like%20to%20enquire%20about%20admissions%2C%20courses%2C%20and%20faculty%20opportunities.",
+    "https://wa.me/919849228757?text=Hi%20SILT%20Hub%2C%20I%20would%20like%20to%20enquire%20about%20student%20registration%2C%20classroom%20rentals%2C%20and%20faculty%20opportunities.",
   
-  // Official Links
-  googleFormUrl: GOOGLE_FORM_URL,
+  // Official Form Links (Google Forms)
+  studentFormUrl: STUDENT_REGISTRATION_FORM_URL,
+  facultyFormUrl: FACULTY_REGISTRATION_FORM_URL,
+  classroomRentalFormUrl: CLASSROOM_RENTAL_FORM_URL,
+  googleFormUrl: STUDENT_REGISTRATION_FORM_URL,
   googleMapsUrl: GOOGLE_MAPS_URL,
 
   // Skill Training & Placement Initiative (Free & Chargeable)
@@ -304,15 +313,88 @@ export const corePillars = [
 ];
 
 /**
+ * 5 Student Impact Points from the Official Student Flyer
+ */
+export const studentImpactPillars = [
+  {
+    id: "concepts",
+    title: "Clear Concepts",
+    tagline: "Understand not just memorize",
+    icon: "Lightbulb",
+    color: "amber"
+  },
+  {
+    id: "guidance",
+    title: "Expert Guidance",
+    tagline: "Learn from experienced faculty",
+    icon: "GraduationCap",
+    color: "emerald"
+  },
+  {
+    id: "performance",
+    title: "Better Performance",
+    tagline: "Score higher in exams",
+    icon: "Target",
+    color: "purple"
+  },
+  {
+    id: "grades",
+    title: "Excellent Grades",
+    tagline: "Build confidence and skills",
+    icon: "TrendingUp",
+    color: "blue"
+  },
+  {
+    id: "career",
+    title: "Successful Career",
+    tagline: "Turn your dreams into reality",
+    icon: "Award",
+    color: "rose"
+  }
+];
+
+/**
+ * Key Subjects Covered from Official Flyer
+ */
+export const coveredSubjects = [
+  { name: "Engineering", details: "Mechanical, ECE, CSE, Civil, etc." },
+  { name: "Science", details: "Physics, Chemistry, Mathematics, etc." },
+  { name: "Commerce & Management", details: "Accounts, Finance, Economics, Business" },
+  { name: "Competitive Exams", details: "JEE, NEET, EAPCET, POLYCET, UPSC, etc." },
+  { name: "Languages & Soft Skills", details: "English, Communication, Personality Prep" },
+  { name: "And More...", details: "Any Subject... Any Exam... We Have the Right Expert for You!" }
+];
+
+/**
+ * 5 Reasons to Choose SILT Hub from the Official Flyer
+ */
+export const whyChooseList = [
+  "Experienced & Qualified Faculty",
+  "Interactive & Result-Oriented Learning",
+  "Flexible Batches & Personalized Attention",
+  "Regular Tests & Performance Tracking",
+  "Support for Career Guidance & Skill Development"
+];
+
+/**
  * Center Photos & Flyer Assets
  */
 export const centerPhotos = [
   {
-    src: "/images/silt-hub-flyer.jpg",
-    alt: "Official Samuh India Learning & Training (SILT) Hub Announcement Flyer",
-    caption: "Official SILT Hub Launch Flyer",
-    tag: "Announcement Flyer",
-    isFlyer: true
+    src: "/images/silt-student-flyer.jpg",
+    alt: "Official Samuh India Learning & Training (SILT) Hub Student Announcement Flyer",
+    caption: "Official Student Registration Flyer",
+    tag: "Student Flyer",
+    isFlyer: true,
+    flyerType: "student"
+  },
+  {
+    src: "/images/silt-classrooms-flyer.jpg",
+    alt: "SILT Education Hub Classroom Spaces Available in Malakpet",
+    caption: "Classroom Spaces for Teachers & Faculty",
+    tag: "Classrooms",
+    isFlyer: true,
+    flyerType: "classroom"
   },
   {
     src: "/images/classroom-front.png",

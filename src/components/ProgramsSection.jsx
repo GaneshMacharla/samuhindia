@@ -80,7 +80,7 @@ export default function ProgramsSection() {
               rel="noopener noreferrer"
               className="w-full lg:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl text-base font-black bg-slate-950 text-amber-300 hover:bg-slate-900 active:scale-95 transition-all shadow-xl group"
             >
-              <span>Register on Google Form</span>
+              <span>Register on Student Form</span>
               <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </a>
           </div>
@@ -178,7 +178,7 @@ export default function ProgramsSection() {
                   rel="noopener noreferrer"
                   className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-2xl text-xs sm:text-sm font-black text-slate-900 bg-slate-100 group-hover:bg-amber-400 group-hover:text-slate-950 transition-all shadow-xs"
                 >
-                  <span>Register on Google Form</span>
+                  <span>Student Registration Form</span>
                   <ExternalLink className="w-4 h-4" />
                 </a>
               </div>

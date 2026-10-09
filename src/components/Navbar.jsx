@@ -19,7 +19,9 @@ export default function Navbar({ onOpenFlyerModal }) {
     { name: 'Courses', href: '#courses' },
     { name: 'Skill & Placement', href: '#skill-placement' },
     { name: 'Why SILT', href: '#why-silt' },
+    { name: 'Student Register', href: '#register' },
     { name: 'Faculty & Mentors', href: '#faculty' },
+    { name: 'Classrooms Rent', href: '#classrooms' },
     { name: 'Location', href: '#location' },
   ];
 
@@ -109,7 +111,7 @@ export default function Navbar({ onOpenFlyerModal }) {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs sm:text-sm font-black text-slate-950 bg-amber-400 hover:bg-amber-300 active:scale-95 transition-all shadow-md shadow-amber-400/25 border border-amber-300"
               >
-                <span>Register Form</span>
+                <span>Student Register</span>
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
             </div>
@@ -160,7 +162,7 @@ export default function Navbar({ onOpenFlyerModal }) {
                   rel="noopener noreferrer"
                   className="w-full py-3 rounded-xl text-center font-black text-slate-950 bg-amber-400 hover:bg-amber-300 shadow-md flex items-center justify-center gap-2"
                 >
-                  <span>Open Official Google Form</span>
+                  <span>Open Student Registration Form</span>
                   <ExternalLink className="w-4 h-4" />
                 </a>
 

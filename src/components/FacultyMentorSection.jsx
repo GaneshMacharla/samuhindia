@@ -1,6 +1,6 @@
 import React from 'react';
 import { Users, GraduationCap, ExternalLink, CheckCircle2, Phone, Sparkles, HeartHandshake } from 'lucide-react';
-import { businessInfo, GOOGLE_FORM_URL } from '../data/hubData';
+import { businessInfo, FACULTY_REGISTRATION_FORM_URL } from '../data/hubData';
 
 export default function FacultyMentorSection() {
   const qualifications = [
@@ -87,6 +87,24 @@ export default function FacultyMentorSection() {
                 ))}
               </div>
             </div>
+
+            {/* Classroom rental callout for tutors & coaches */}
+            <div className="bg-emerald-500/15 border border-emerald-400/30 rounded-3xl p-5 backdrop-blur-md flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+              <div>
+                <span className="text-xs font-black uppercase tracking-wider text-emerald-300 block">
+                  Looking for Class Rooms to Teach?
+                </span>
+                <p className="text-xs text-blue-100 mt-0.5">
+                  Rent ready-to-teach air-conditioned rooms &amp; cabins for your own coaching batches.
+                </p>
+              </div>
+              <a
+                href="#classrooms"
+                className="shrink-0 px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-950 bg-emerald-400 hover:bg-emerald-300 transition-colors shadow-xs"
+              >
+                View Spaces ↗
+              </a>
+            </div>
           </div>
 
           {/* Right Column: Google Form Registration Card */}
@@ -108,13 +126,13 @@ export default function FacultyMentorSection() {
               {/* DIRECT GOOGLE FORM LINK (Sunny Gold) */}
               <div className="mt-6 space-y-3">
                 <a
-                  href={GOOGLE_FORM_URL}
+                  href={FACULTY_REGISTRATION_FORM_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-2xl text-base font-black text-slate-950 bg-amber-400 hover:bg-amber-300 active:scale-95 transition-all shadow-xl shadow-amber-400/30 border border-amber-300 group"
                 >
                   <GraduationCap className="w-5 h-5 text-slate-950" />
-                  <span>Register on Google Form</span>
+                  <span>Register as Faculty (Google Form)</span>
                   <ExternalLink className="w-5 h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </a>
 

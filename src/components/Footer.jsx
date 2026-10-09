@@ -1,6 +1,12 @@
 import React from 'react';
 import { Phone, MessageSquare, MapPin, Clock, Star, ExternalLink, Sparkles } from 'lucide-react';
-import { businessInfo, GOOGLE_FORM_URL, GOOGLE_MAPS_URL } from '../data/hubData';
+import {
+  businessInfo,
+  STUDENT_REGISTRATION_FORM_URL,
+  FACULTY_REGISTRATION_FORM_URL,
+  CLASSROOM_RENTAL_FORM_URL,
+  GOOGLE_MAPS_URL
+} from '../data/hubData';
 
 export default function Footer({ onOpenFlyerModal }) {
   const currentYear = new Date().getFullYear();
@@ -98,8 +104,41 @@ export default function Footer({ onOpenFlyerModal }) {
                 </a>
               </li>
               <li>
+                <a
+                  href={STUDENT_REGISTRATION_FORM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-amber-300 hover:underline flex items-center gap-1 font-black"
+                >
+                  <span>★ Student Registration Form</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              </li>
+              <li>
                 <a href="#skill-placement" className="hover:text-amber-300 transition-colors font-bold text-amber-400">
-                  ★ Skill &amp; Placement Tracks
+                  Skill &amp; Placement Tracks
+                </a>
+              </li>
+              <li>
+                <a
+                  href={FACULTY_REGISTRATION_FORM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-200 hover:text-white hover:underline flex items-center gap-1"
+                >
+                  <span>Faculty Registration Form</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href={CLASSROOM_RENTAL_FORM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-emerald-300 hover:text-emerald-200 hover:underline flex items-center gap-1 font-semibold"
+                >
+                  <span>Classroom Rental Form</span>
+                  <ExternalLink className="w-3 h-3" />
                 </a>
               </li>
               <li>
@@ -108,14 +147,8 @@ export default function Footer({ onOpenFlyerModal }) {
                 </a>
               </li>
               <li>
-                <a
-                  href={GOOGLE_FORM_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-amber-300 hover:underline flex items-center gap-1 font-bold"
-                >
-                  <span>Google Registration Form</span>
-                  <ExternalLink className="w-3 h-3" />
+                <a href="#classrooms" className="hover:text-white transition-colors">
+                  Classrooms For Rent
                 </a>
               </li>
               <li>

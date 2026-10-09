@@ -81,7 +81,7 @@ export default function Hero({ onOpenFlyerModal }) {
 
             {/* Flyer Hook Main Headline (Royal Blue & Sunny Amber) */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[50px] font-black text-blue-950 tracking-tight leading-[1.14]">
-              Struggling to Understand Your Subjects?{' '}
+              Struggling to Understand Concepts?{' '}
               <span className="text-blue-600 block sm:inline">
                 You’re Not Alone!
               </span>
@@ -103,7 +103,7 @@ export default function Hero({ onOpenFlyerModal }) {
             {/* CTAs: GOOGLE FORM ONLY */}
             <div className="pt-2 flex flex-wrap items-center gap-3 sm:gap-4">
               
-              {/* PRIMARY ACTION: DIRECT GOOGLE FORM (Bright Sunny Gold) */}
+              {/* PRIMARY ACTION: DIRECT STUDENT GOOGLE FORM (Bright Sunny Gold) */}
               <a
                 href={GOOGLE_FORM_URL}
                 target="_blank"
@@ -111,7 +111,7 @@ export default function Hero({ onOpenFlyerModal }) {
                 id="hero-google-form-cta"
                 className="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-2xl text-base font-black text-slate-950 bg-amber-400 hover:bg-amber-300 active:scale-95 transition-all shadow-lg shadow-amber-400/30 border border-amber-300 group"
               >
-                <span>Register on Google Form</span>
+                <span>Student Registration Form</span>
                 <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </a>
 

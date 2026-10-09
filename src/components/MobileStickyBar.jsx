@@ -27,7 +27,7 @@ export default function MobileStickyBar() {
           <span>WhatsApp</span>
         </a>
 
-        {/* Google Form Direct Button (Sunny Gold) */}
+        {/* Student Registration Form Direct Button (Sunny Gold) */}
         <a
           href={GOOGLE_FORM_URL}
           target="_blank"
@@ -35,7 +35,7 @@ export default function MobileStickyBar() {
           className="flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-[11px] active:scale-95 transition-all shadow-md border border-amber-300"
         >
           <ExternalLink className="w-4 h-4 mb-0.5" />
-          <span>Google Form</span>
+          <span>Student Form</span>
         </a>
 
       </div>

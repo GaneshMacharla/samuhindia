@@ -6,6 +6,7 @@ import AboutSection from './components/AboutSection';
 import ProgramsSection from './components/ProgramsSection';
 import WhyChooseUs from './components/WhyChooseUs';
 import FacultyMentorSection from './components/FacultyMentorSection';
+import ClassroomRentalSection from './components/ClassroomRentalSection';
 import GoogleFormPortal from './components/GoogleFormPortal';
 import ReviewsSection from './components/ReviewsSection';
 import LocationSection from './components/LocationSection';
@@ -41,11 +42,14 @@ export default function App() {
         {/* 6. Why Choose SILT Hub (6 Core Pillars from Flyer) */}
         <WhyChooseUs />
 
-        {/* 7. Faculty, Mentors & Academic Partners Recruitment */}
+        {/* 7. Official Registration Portals (STUDENT REGISTRATION FORM FIRST) */}
+        <GoogleFormPortal />
+
+        {/* 8. Faculty, Mentors & Academic Partners Recruitment */}
         <FacultyMentorSection />
 
-        {/* 8. Google Form Registration Hub (Pure Frontend, Zero Backend) */}
-        <GoogleFormPortal />
+        {/* 9. Classroom Spaces For Rent (Hourly/Daily/Monthly) */}
+        <ClassroomRentalSection onOpenFlyerModal={() => setIsFlyerModalOpen(true)} />
 
         {/* 9. Verified Google Reviews */}
         <ReviewsSection />
