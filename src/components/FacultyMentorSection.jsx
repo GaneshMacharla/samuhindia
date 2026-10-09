@@ -11,13 +11,13 @@ export default function FacultyMentorSection() {
   ];
 
   const streams = [
-    "School Education (Class 1-10 CBSE / ICSE / State)",
-    "Intermediate (MPC / BiPC / MEC / CEC)",
+    "Higher School (Class 9th & 10th - CBSE / ICSE / TG State Board)",
+    "Intermediate (11th & 12th - CBSE / ICSE / TG State Board)",
     "Engineering & Polytechnic Disciplines",
     "Medical & Pharmacy Sciences",
     "Competitive Exams (JEE, NEET, EAPCET, UPSC, SSC)",
     "Graduation Subjects (BCA, B.Com, BBA, B.Sc)",
-    "Spoken English, Soft Skills & Placement Trainers"
+    "Skill Training & Placement Mentors (Free & Chargeable Programs)"
   ];
 
   return (

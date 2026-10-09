@@ -17,7 +17,7 @@ export const businessInfo = {
   missionTagline: "Your Success is Our Mission!",
   futureTagline: "Right Guidance Today... A Brighter Future Tomorrow!",
   supportingText:
-    "An Education & Career Development initiative expanding Teaching, Training, Skill Development & Placement activities across School, Intermediate, Degree, Technical & Competitive exams in Hyderabad.",
+    "An Education & Career Development initiative expanding Teaching, Training, Skill Development & Placement activities across Higher School (9th & 10th), Intermediate (11th & 12th CBSE, ICSE, TG State Board), all Higher Studies & Competitive exams in Hyderabad.",
   category: "Education & Career Development Hub",
   
   // Contact & Channels
@@ -32,13 +32,13 @@ export const businessInfo = {
   googleFormUrl: GOOGLE_FORM_URL,
   googleMapsUrl: GOOGLE_MAPS_URL,
 
-  // Free Initiative
-  freeCourseOffer: {
-    title: "Free Skilling & Placement Course for Graduates",
-    badge: "100% Free of Cost",
+  // Skill Training & Placement Initiative (Free & Chargeable)
+  skillCourseOffer: {
+    title: "Skill Training & Placement Programs",
+    badge: "Free & Chargeable Options",
     description:
-      "A zero-cost skilling and corporate placement training course for fresh & recent graduates to build job-ready digital, communication, and soft skills.",
-    targetAudience: "Graduates & Final Year Students",
+      "Select foundational skill training and placement assistance offered free of cost for eligible learners. Advanced specialized career tracks and in-depth placement programs provided on a chargeable basis.",
+    targetAudience: "Graduates, Job Seekers & College Students",
   },
 
   // Address
@@ -72,12 +72,12 @@ export const businessInfo = {
 export const programs = [
   {
     id: "school-education",
-    category: "School Education",
-    badge: "Class 1 – 10",
-    name: "School Education (Class 1 – 10)",
-    tagline: "All Subjects • CBSE / ICSE / State Board",
-    description: "Strong conceptual base in Mathematics, Science, Social, and Languages. Daily practice, homework guidance, and exam preparation with caring mentors.",
-    branches: ["Class 1 – 10 (All Subjects)", "CBSE Board", "ICSE Board", "State Board", "Maths & Science Clinics"],
+    category: "Higher School (9th & 10th)",
+    badge: "Class 9th & 10th",
+    name: "Higher School Coaching (9th & 10th)",
+    tagline: "CBSE • ICSE • TG State Board",
+    description: "Strong conceptual base in Mathematics, Science, Social Studies, and Languages for Classes 9 & 10. Board-focused revision, unit test series, and dedicated doubt clearance with caring mentors.",
+    branches: ["Class 9th (CBSE / ICSE / TG State)", "Class 10th (CBSE / ICSE / TG State)", "TG State Board (SSC) Focus", "CBSE & ICSE Syllabus", "Maths & Science Clinics"],
     theme: {
       accent: "from-amber-500 to-orange-600",
       badgeBg: "bg-amber-100 text-amber-900",
@@ -86,20 +86,20 @@ export const programs = [
       highlight: "text-amber-600"
     },
     highlights: [
-      "Simplified concept explanations with real examples",
-      "Regular unit tests & board revision sessions",
-      "Special attention for difficult topics and maths",
-      "Doubt clearing & personal academic care"
+      "Rigorous preparation for 9th foundation & 10th board exams",
+      "CBSE, ICSE, and TG State Board targeted modules",
+      "Regular mock tests, past paper reviews & model answers",
+      "Special attention for mathematics & science doubts"
     ]
   },
   {
     id: "intermediate",
     category: "Intermediate (11 & 12)",
-    badge: "Junior College",
+    badge: "Inter 11th & 12th",
     name: "Intermediate (11 & 12) Coaching",
-    tagline: "MPC | BiPC | MEC | CEC and more...",
-    description: "Rigorous academic coaching for Plus 2 students. Focuses on in-depth syllabus mastery, numerical derivations, board theory, and entrance readiness.",
-    branches: ["MPC (Maths, Physics, Chem)", "BiPC (Biology, Physics, Chem)", "MEC (Maths, Econ, Commerce)", "CEC (Civics, Econ, Commerce)"],
+    tagline: "CBSE • ICSE • TG State Board | MPC • BiPC • MEC • CEC",
+    description: "Comprehensive academic coaching for Plus 2 / Junior College students (CBSE, ICSE, TG State Board). Focuses on board exam high scores alongside strong foundation for competitive entrances.",
+    branches: ["MPC (Maths, Physics, Chem)", "BiPC (Biology, Physics, Chem)", "MEC (Maths, Econ, Commerce)", "CEC (Civics, Econ, Commerce)", "CBSE / ICSE / TG State Board"],
     theme: {
       accent: "from-purple-600 to-indigo-700",
       badgeBg: "bg-purple-100 text-purple-900",
@@ -108,10 +108,10 @@ export const programs = [
       highlight: "text-purple-600"
     },
     highlights: [
-      "Experienced subject-specialist faculty",
-      "Extensive chapter-wise problem banks",
-      "Board exam score enhancement strategy",
-      "Personalized doubt clearance & review"
+      "Experienced subject-specialist faculty for all groups",
+      "Chapter-wise problem banks & board score booster strategy",
+      "CBSE, ICSE & TG State Board curriculum coverage",
+      "Personalized doubt clearance & numerical derivation guidance"
     ]
   },
   {
@@ -225,13 +225,13 @@ export const programs = [
     ]
   },
   {
-    id: "free-placement",
-    category: "Free Placement Initiative",
-    badge: "★ FREE for Graduates",
-    name: "Free Skilling & Placement Course for Graduates",
-    tagline: "Digital Skills | Spoken English | Soft Skills | Placement",
-    description: "Empowering fresh graduates with essential employability skills, digital literacy, conversational English, personality development, and placement support — 100% free of cost!",
-    branches: ["100% Free of Cost", "Spoken English & Communication", "Personality Development & Soft Skills", "Computer Courses (Basic to Advanced)", "Interview & Resume Mastery"],
+    id: "skill-placement",
+    category: "Skill Training & Placement",
+    badge: "Free & Chargeable Options",
+    name: "Skill Training & Placement Programs",
+    tagline: "Select Free Modules + Advanced Chargeable Tracks",
+    description: "Equipping learners with job-ready professional abilities. We offer select free skill training and placement assistance, as well as comprehensive advanced career programs on a chargeable basis.",
+    branches: ["Select Free Skill Training Modules", "Chargeable Career & IT Tracks", "Spoken English & Communication", "Computer & IT Skill Courses", "Personality Development", "Placement & Interview Prep"],
     theme: {
       accent: "from-amber-500 via-amber-600 to-emerald-600",
       badgeBg: "bg-amber-400 text-slate-950 font-black",
@@ -240,10 +240,10 @@ export const programs = [
       highlight: "text-amber-600 font-extrabold"
     },
     highlights: [
-      "Completely Free of Cost for all graduates",
-      "Daily interactive conversational English drills",
-      "Resume building, group discussions & mock interviews",
-      "Industry-ready digital proficiency certificate"
+      "Select foundational skilling & placement modules completely free",
+      "Advanced professional career tracks on affordable chargeable basis",
+      "Spoken English, corporate communication & digital literacy",
+      "Resume building, mock interviews & placement guidance"
     ],
     isFeatured: true
   }

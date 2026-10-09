@@ -8,7 +8,7 @@ export default function EnquiryForm({ selectedProgram, onClearSelectedProgram })
     name: '',
     phone: '',
     email: '',
-    program: selectedProgram || (programs[0] ? programs[0].name : 'Free Skilling & Placement Course for Graduates'),
+    program: selectedProgram || (programs[0] ? programs[0].name : 'Skill Training & Placement Programs'),
     contactMethod: 'Phone',
     message: ''
   });
@@ -122,7 +122,7 @@ export default function EnquiryForm({ selectedProgram, onClearSelectedProgram })
             Connect With SILT Hub Today
           </h2>
           <p className="mt-3 text-base sm:text-lg text-slate-600">
-            Have questions about upcoming batches, syllabus tracks, free graduate course enrollment, or faculty openings? Get in touch below.
+            Have questions about upcoming batches, syllabus tracks, skill training &amp; placement enrollment, or faculty openings? Get in touch below.
           </p>
         </div>
 
@@ -373,26 +373,30 @@ export default function EnquiryForm({ selectedProgram, onClearSelectedProgram })
                       >
                         {inquiryType === 'student' ? (
                           <>
-                            <option value="Free Skilling & Placement Course for Graduates">
-                              ★ Free Skilling &amp; Placement Course for Graduates (Zero Cost)
+                            <option value="Skill Training & Placement (Select Free Modules)">
+                              ★ Skill Training &amp; Placement (Select Free Modules)
+                            </option>
+                            <option value="Skill Training & Placement (Advanced Chargeable Track)">
+                              Skill Training &amp; Placement (Advanced Chargeable Track)
                             </option>
                             {programs.map((prog) => (
                               <option key={prog.id} value={prog.name}>
                                 {prog.name}
                               </option>
                             ))}
-                            <option value="School Tuition (Class 1-10)">School Tuition (Class 1-10 All Subjects)</option>
-                            <option value="Intermediate Coaching (MPC/BiPC/MEC/CEC)">Intermediate Coaching (MPC/BiPC/MEC/CEC)</option>
-                            <option value="Competitive Exam Prep (JEE/NEET/EAPCET/Govt)">Competitive Exam Prep (JEE/NEET/EAPCET/Govt)</option>
+                            <option value="Higher School Coaching (Class 9th & 10th - CBSE / ICSE / TG State Board)">Higher School Coaching (Class 9th &amp; 10th - CBSE / ICSE / TG State)</option>
+                            <option value="Intermediate Coaching (11th & 12th - CBSE / ICSE / TG State Board)">Intermediate Coaching (11th &amp; 12th - CBSE / ICSE / TG State Board)</option>
+                            <option value="Competitive Exam Prep (JEE/NEET/EAPCET/POLYCET)">Competitive Exam Prep (JEE / NEET / EAPCET / POLYCET)</option>
                             <option value="Engineering & Diploma Tuitions">Engineering &amp; Diploma Tuitions (ECE, CSE, Mech, Civil)</option>
                             <option value="Medical & Allied Subjects">Medical &amp; Allied Subjects (MBBS, BDS, Nursing)</option>
-                            <option value="Pharmacy Tuitions">Pharmacy Tuitions (B.Pharm, D.Pharm)</option>
+                            <option value="Pharmacy Tuitions">Pharmacy Tuitions (B.Pharm, D.Pharm, M.Pharm)</option>
+                            <option value="Degree Courses (BCA/B.Com/BBA/B.Sc/BA)">Degree Courses (BCA, B.Com, BBA, B.Sc, BA)</option>
                             <option value="General Academic Consultation">General Academic Consultation</option>
                           </>
                         ) : (
                           <>
-                            <option value="Faculty: School Education (Class 1-10)">Faculty: School Education (Class 1-10)</option>
-                            <option value="Faculty: Intermediate (MPC / BiPC / MEC / CEC)">Faculty: Intermediate (MPC / BiPC / MEC / CEC)</option>
+                            <option value="Faculty: Higher School Education (Class 9th & 10th CBSE/ICSE/TG State)">Faculty: Higher School Education (Class 9th &amp; 10th CBSE/ICSE/TG State)</option>
+                            <option value="Faculty: Intermediate (11th & 12th - CBSE / ICSE / TG State Board)">Faculty: Intermediate (11th &amp; 12th - CBSE / ICSE / TG State Board)</option>
                             <option value="Faculty: Engineering & Polytechnic">Faculty: Engineering &amp; Polytechnic Disciplines</option>
                             <option value="Faculty: Medical & Allied Sciences">Faculty: Medical &amp; Allied Sciences</option>
                             <option value="Faculty: Pharmacy Subjects">Faculty: Pharmacy Subjects</option>

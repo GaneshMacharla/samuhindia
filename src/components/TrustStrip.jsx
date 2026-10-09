@@ -24,17 +24,17 @@ export default function TrustStrip() {
             </div>
           </div>
 
-          {/* Trust Metric 2: Free Graduate Course */}
+          {/* Trust Metric 2: Skill & Placement Programs */}
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-emerald-100 border border-emerald-300 flex items-center justify-center text-emerald-700 shrink-0 shadow-xs">
               <Gift className="w-5 h-5" />
             </div>
             <div className="text-left">
               <span className="text-xs sm:text-sm font-black text-emerald-800 block">
-                100% Free Course
+                Skill &amp; Placement
               </span>
               <p className="text-[11px] text-slate-600 font-medium">
-                Skilling for Graduates
+                Free &amp; Chargeable Options
               </p>
             </div>
           </div>

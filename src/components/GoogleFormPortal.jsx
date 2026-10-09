@@ -22,7 +22,7 @@ export default function GoogleFormPortal() {
           </h2>
 
           <p className="mt-4 text-base sm:text-lg text-blue-100 max-w-2xl mx-auto leading-relaxed">
-            Whether you want to join as <span className="text-amber-300 font-bold">Faculty or Mentor</span>, enroll in our <span className="text-amber-300 font-bold">Free Graduate Course</span>, or secure <span className="text-white font-bold">Student Coaching</span>, complete your registration on our official Google Form.
+            Whether you want to join as <span className="text-amber-300 font-bold">Faculty or Mentor</span>, enroll in our <span className="text-amber-300 font-bold">Skill Training &amp; Placement Tracks</span> (Free &amp; Chargeable options), or secure <span className="text-white font-bold">Student Coaching</span> for Higher School, Inter, or Higher Studies, complete your registration on our official Google Form.
           </p>
         </div>
 
@@ -53,7 +53,7 @@ export default function GoogleFormPortal() {
                       Faculty, Mentors &amp; Subject Experts
                     </h4>
                     <p className="text-xs sm:text-sm text-blue-100 mt-0.5">
-                      Apply with your teaching specialization, experience, and available batch slots across School, Inter, Degree, Medical, or Engg.
+                      Apply with your teaching specialization, experience, and available batch slots across Higher School (9th-10th), Inter, Degree, Medical, or Engg.
                     </p>
                   </div>
                 </div>
@@ -64,10 +64,10 @@ export default function GoogleFormPortal() {
                   </div>
                   <div>
                     <h4 className="text-sm sm:text-base font-bold text-white">
-                      Free Skilling &amp; Placement Course for Graduates
+                      Skill Training &amp; Placement (Free &amp; Chargeable)
                     </h4>
                     <p className="text-xs sm:text-sm text-blue-100 mt-0.5">
-                      Graduates can enroll for the zero-cost spoken English, digital skills, and interview readiness batch.
+                      Enroll for select free foundational modules (Spoken English, digital literacy) or advanced professional career &amp; placement tracks on chargeable basis.
                     </p>
                   </div>
                 </div>
@@ -81,7 +81,7 @@ export default function GoogleFormPortal() {
                       Student Admissions &amp; Course Inquiries
                     </h4>
                     <p className="text-xs sm:text-sm text-blue-100 mt-0.5">
-                      Select your desired subject, board (CBSE/ICSE/State), competitive exam (JEE/NEET), or semester modules.
+                      Select Higher School (9th &amp; 10th), Intermediate (11 &amp; 12), Board (CBSE / ICSE / TG State Board), or Higher Studies &amp; Entrances (JEE / NEET / EAPCET).
                     </p>
                   </div>
                 </div>

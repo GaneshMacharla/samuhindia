@@ -112,10 +112,10 @@ export default function AboutSection({ onOpenFlyerModal }) {
                   </div>
                   <div>
                     <h4 className="text-base font-bold text-slate-900">
-                      From School to Career Spectrum
+                      Higher School to Higher Studies Spectrum
                     </h4>
                     <p className="text-xs sm:text-sm text-slate-600 mt-0.5">
-                      Coaching across all stages: School (1-10), Intermediate (MPC/BiPC/MEC/CEC), Degree, Engineering, Medical, Pharmacy, and Competitive exams.
+                      Coaching across Higher School (9th &amp; 10th CBSE, ICSE, TG State Board), Intermediate (11th &amp; 12th), and all Higher Studies (Degree, Engineering, Medical, Pharmacy, and Competitive exams).
                     </p>
                   </div>
                 </div>
@@ -128,10 +128,10 @@ export default function AboutSection({ onOpenFlyerModal }) {
                   </div>
                   <div>
                     <h4 className="text-base font-bold text-slate-900">
-                      Free Placement Skilling for Graduates
+                      Skill Training &amp; Placement (Free &amp; Chargeable)
                     </h4>
                     <p className="text-xs sm:text-sm text-slate-600 mt-0.5">
-                      Empowering young graduates with zero-cost spoken English, soft skills, digital courses, and placement guidance.
+                      Select foundational skill training &amp; placement modules offered free of cost, with advanced professional career tracks on an affordable chargeable basis.
                     </p>
                   </div>
                 </div>

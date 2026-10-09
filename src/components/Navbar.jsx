@@ -17,7 +17,7 @@ export default function Navbar({ onOpenFlyerModal }) {
   const navLinks = [
     { name: 'About', href: '#about' },
     { name: 'Courses', href: '#courses' },
-    { name: 'Free Course', href: '#free-course' },
+    { name: 'Skill & Placement', href: '#skill-placement' },
     { name: 'Why SILT', href: '#why-silt' },
     { name: 'Faculty & Mentors', href: '#faculty' },
     { name: 'Location', href: '#location' },

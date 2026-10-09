@@ -98,8 +98,8 @@ export default function Footer({ onOpenFlyerModal }) {
                 </a>
               </li>
               <li>
-                <a href="#free-course" className="hover:text-amber-300 transition-colors font-bold text-amber-400">
-                  ★ Free Graduate Course
+                <a href="#skill-placement" className="hover:text-amber-300 transition-colors font-bold text-amber-400">
+                  ★ Skill &amp; Placement Tracks
                 </a>
               </li>
               <li>

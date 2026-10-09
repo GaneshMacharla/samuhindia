@@ -7,20 +7,20 @@ export default function ProgramsSection() {
 
   const categories = [
     'All Courses',
-    'School & Inter',
+    'Higher School (9th & 10th)',
+    'Intermediate (11 & 12)',
+    'Higher Studies',
     'Competitive Exams',
-    'Engineering',
-    'Medical & Pharmacy',
-    'Degree & Career'
+    'Skill & Placement'
   ];
 
   const filteredPrograms = programs.filter((prog) => {
     if (activeCategory === 'All Courses') return true;
-    if (activeCategory === 'School & Inter') return prog.id === 'school-education' || prog.id === 'intermediate';
+    if (activeCategory === 'Higher School (9th & 10th)') return prog.id === 'school-education';
+    if (activeCategory === 'Intermediate (11 & 12)') return prog.id === 'intermediate';
+    if (activeCategory === 'Higher Studies') return prog.id === 'engineering' || prog.id === 'medical-allied' || prog.id === 'pharmacy' || prog.id === 'graduation-degree';
     if (activeCategory === 'Competitive Exams') return prog.id === 'competitive-exams';
-    if (activeCategory === 'Engineering') return prog.id === 'engineering';
-    if (activeCategory === 'Medical & Pharmacy') return prog.id === 'medical-allied' || prog.id === 'pharmacy';
-    if (activeCategory === 'Degree & Career') return prog.id === 'graduation-degree' || prog.id === 'free-placement';
+    if (activeCategory === 'Skill & Placement') return prog.id === 'skill-placement' || prog.id === 'free-placement';
     return true;
   });
 
@@ -32,7 +32,7 @@ export default function ProgramsSection() {
         <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-900 text-xs sm:text-sm font-bold mb-3 shadow-xs">
             <BookOpen className="w-4 h-4 text-blue-600" />
-            <span>From School to Career — We Support Every Step!</span>
+            <span>Higher School (9th-10th) to Intermediate &amp; All Higher Studies</span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
@@ -40,25 +40,37 @@ export default function ProgramsSection() {
           </h2>
 
           <p className="mt-4 text-base sm:text-lg text-slate-600">
-            Expert instruction, clear conceptual explanations, test series, and career placements all under one roof at SILT Hub Hyderabad.
+            Expert instruction, clear conceptual explanations, board &amp; university test series, and career placements all under one roof at SILT Hub Hyderabad.
           </p>
         </div>
 
-        {/* Free Placement Special Feature Box */}
-        <div id="free-course" className="mb-14 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-amber-500 via-amber-400 to-emerald-500 text-slate-950 shadow-2xl flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 text-left relative overflow-hidden">
-          <div className="space-y-2 max-w-3xl">
+        {/* Skill Training & Placement Special Feature Box */}
+        <div id="skill-placement" className="mb-14 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-amber-500 via-amber-400 to-emerald-500 text-slate-950 shadow-2xl flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 text-left relative overflow-hidden">
+          <div id="free-course" className="space-y-2 max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-950 text-amber-300 text-xs font-black uppercase tracking-wider">
               <Gift className="w-4 h-4 text-amber-300" />
-              <span>Special Free Initiative for Graduates</span>
+              <span>Skill Training &amp; Placement • Free &amp; Chargeable Programs</span>
             </div>
 
             <h3 className="text-2xl sm:text-3xl font-black text-slate-950">
-              Free Skilling &amp; Placement Course for Graduates
+              Skill Training &amp; Placement Programs
             </h3>
 
             <p className="text-sm sm:text-base text-slate-900 font-medium leading-relaxed">
-              Equipping fresh graduates with job-ready computer courses, conversational spoken English, soft skills, personality grooming, and placement interview drills — <strong>100% Free of Cost</strong>!
+              Equipping students, graduates, and job seekers with career-ready skills. <strong>Select foundational skill &amp; placement modules are completely free</strong>, while advanced specialized career tracks and job-ready bootcamps are provided on an <strong>affordable chargeable basis</strong> (all programs are not free).
             </p>
+
+            <div className="pt-2 flex flex-wrap gap-2 text-xs font-bold">
+              <span className="bg-slate-950/15 backdrop-blur-xs px-3 py-1 rounded-lg text-slate-950 border border-slate-950/20">
+                ✓ Select Free Foundational Skilling
+              </span>
+              <span className="bg-slate-950/15 backdrop-blur-xs px-3 py-1 rounded-lg text-slate-950 border border-slate-950/20">
+                ✓ Advanced Chargeable Career Tracks
+              </span>
+              <span className="bg-slate-950/15 backdrop-blur-xs px-3 py-1 rounded-lg text-slate-950 border border-slate-950/20">
+                ✓ Resume &amp; Interview Placement Assistance
+              </span>
+            </div>
           </div>
 
           <div className="shrink-0 w-full lg:w-auto">
@@ -68,7 +80,7 @@ export default function ProgramsSection() {
               rel="noopener noreferrer"
               className="w-full lg:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl text-base font-black bg-slate-950 text-amber-300 hover:bg-slate-900 active:scale-95 transition-all shadow-xl group"
             >
-              <span>Enroll Free on Google Form</span>
+              <span>Register on Google Form</span>
               <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </a>
           </div>
