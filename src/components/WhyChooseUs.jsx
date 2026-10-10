@@ -101,10 +101,10 @@ export default function WhyChooseUs() {
             </div>
             <div className="space-y-1">
               <h4 className="text-lg sm:text-xl font-black text-white">
-                Zero Traffic Hassle: Steps from New Market Metro Exit-D
+                Zero Traffic Hassle: 10-Min Walk from New Market Metro Exit-D
               </h4>
               <p className="text-xs sm:text-sm text-slate-300">
-                Direct walk-up right at Exit-D, beside Gunj, Gate - 4, Saleem Nagar Colony, Malakpet. Safe, fast, and punctual commute.
+                Easy 10-minute walk (~500 m) from Exit-D, beside Gunj, Gate - 4, Saleem Nagar Colony, Malakpet. Safe, fast, and punctual commute.
               </p>
             </div>
           </div>

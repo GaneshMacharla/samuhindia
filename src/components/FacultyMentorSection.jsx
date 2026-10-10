@@ -37,7 +37,7 @@ export default function FacultyMentorSection() {
     },
     {
       title: "Disciplined Academic Environment",
-      desc: "Peaceful learning atmosphere steps from New Market Metro Exit-D, with complete administrative support."
+      desc: "Peaceful learning atmosphere a 10-min walk (~500 m) from New Market Metro Exit-D, with complete administrative support."
     }
   ];
 
@@ -89,7 +89,7 @@ export default function FacultyMentorSection() {
                   </div>
                   <div>
                     <span className="text-[11px] font-black uppercase tracking-wider text-amber-300 block">
-                      Part 1: What We Look For
+                      What We Look For
                     </span>
                     <h3 className="text-xl sm:text-2xl font-black text-white">
                       Faculty Requirements
@@ -141,7 +141,7 @@ export default function FacultyMentorSection() {
                   </div>
                   <div>
                     <span className="text-[11px] font-black uppercase tracking-wider text-blue-300 block">
-                      Part 2: What SILT Hub Offers Educators
+                      What SILT Hub Offers Educators
                     </span>
                     <h3 className="text-xl sm:text-2xl font-black text-white">
                       Faculty Expectations &amp; Environment
@@ -182,7 +182,7 @@ export default function FacultyMentorSection() {
             
             <div className="lg:col-span-8 space-y-4">
               <span className="inline-block px-3.5 py-1 rounded-full bg-blue-900 text-amber-300 text-xs font-black uppercase tracking-wider">
-                Part 3: Faculty Registration Portal
+                Faculty Registration Portal
               </span>
 
               <h3 className="text-2xl sm:text-3xl font-black text-blue-950 leading-tight">

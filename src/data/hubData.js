@@ -9,9 +9,9 @@ export const CLASSROOM_RENTAL_FORM_URL = "https://forms.gle/b3M4xQ1Vjqx4WypB7";
 export const GOOGLE_FORM_URL = STUDENT_REGISTRATION_FORM_URL;
 
 // Robust, universal Google Maps URLs that open directly in Google Maps on all devices
-export const GOOGLE_MAPS_URL = "https://www.google.com/maps/search/?api=1&query=SAMUH+INDIA+Learning+%26+Training+Hub+Malakpet+Hyderabad";
-export const GOOGLE_MAPS_PLACE_URL = "https://www.google.com/maps/place/SAMUH+INDIA+Learning+%26+Training+Hub,+New+Market,+1st+Floor+Pillar+no+2463,+Metro+Station+H.+No:+16-11-1%2F5%2F6%2F1+beside+Gunj,+Saleem+Nagar+Colony,+Malakpet,+Hyderabad,+Telangana+500036";
-export const GOOGLE_MAPS_EMBED_URL = "https://www.openstreetmap.org/export/embed.html?bbox=78.4970%2C17.3705%2C78.5060%2C17.3765&layer=mapnik&marker=17.3734%2C78.5015";
+export const GOOGLE_MAPS_URL = "https://www.google.com/maps/search/?api=1&query=17.3748%2C78.5055";
+export const GOOGLE_MAPS_PLACE_URL = "https://www.google.com/maps/place/17%C2%B022'29.3%22N+78%C2%B030'19.8%22E/@17.3748,78.5055,17z";
+export const GOOGLE_MAPS_EMBED_URL = "https://www.openstreetmap.org/export/embed.html?bbox=78.4980%2C17.3705%2C78.5090%2C17.3785&layer=mapnik&marker=17.3748%2C78.5055";
 
 export const businessInfo = {
   name: "Samuh India Learning & Training (SILT) Hub",
@@ -100,17 +100,17 @@ export const businessInfo = {
     ]
   },
 
-  // Address - Explicitly featuring Exit-D, New Market Metro Station
+  // Address - Located ~500 m / 10-min walk from Exit-D, New Market Metro Station
   address: {
-    metro: "Exit-D, New Market Metro station",
-    line1: "Near New Market Metro Station Exit-D",
+    metro: "Near Exit-D, New Market Metro Station (10-Min Walk / ~500 m)",
+    line1: "Beside Gunj, Gate - 4, Saleem Nagar Colony",
     line2: "Beside Gunj, Gate - 4, Saleem Nagar Colony",
-    line3: "Malakpet Extension",
+    line3: "Malakpet",
     city: "Hyderabad",
     state: "Telangana",
     pincode: "500036",
-    full: "Exit-D, New Market Metro station, Beside Gunj, Gate - 4, Saleem Nagar Colony, Malakpet, Hyderabad, Telangana 500036",
-    landmark: "Beside Gunj, Gate - 4, Saleem Nagar, Exit-D of New Market Metro Station"
+    full: "Beside Gunj, Gate - 4, Saleem Nagar Colony, Malakpet, Hyderabad, Telangana 500036 (10-min walk / ~500 m from Exit-D, New Market Metro)",
+    landmark: "Beside Gunj, Gate - 4, Saleem Nagar Colony (~500 m / 10-min walk from Exit-D of New Market Metro Station)"
   },
 
   // Rating

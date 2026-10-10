@@ -1,9 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { X, Download, Mail, MessageSquare, ExternalLink, GraduationCap, Building2 } from 'lucide-react';
 import { businessInfo, STUDENT_REGISTRATION_FORM_URL, CLASSROOM_RENTAL_FORM_URL } from '../data/hubData';
 
-export default function FlyerModal({ isOpen, onClose }) {
-  const [activeTab, setActiveTab] = useState('student'); // 'student' | 'classroom'
+export default function FlyerModal({ isOpen, onClose, initialTab = 'student' }) {
+  const [activeTab, setActiveTab] = useState(initialTab);
+
+  useEffect(() => {
+    if (isOpen) {
+      setActiveTab(initialTab);
+    }
+  }, [isOpen, initialTab]);
 
   if (!isOpen) return null;
 
@@ -22,10 +28,10 @@ export default function FlyerModal({ isOpen, onClose }) {
           src: '/images/silt-classrooms-flyer.jpg',
           alt: 'SILT Education Hub Classroom Spaces Available Flyer - Malakpet Hyderabad',
           downloadName: 'SILT-Classrooms-Space-Flyer.jpg',
-          title: 'Classroom Spaces Announcement Flyer',
+          title: 'Classroom on Rent Announcement Flyer',
           desc: 'Modern classrooms (10-30 students) for teachers, tutors & institutions',
           formUrl: CLASSROOM_RENTAL_FORM_URL,
-          formBtnText: 'Classroom Rental Form'
+          formBtnText: 'Classrooms Registration Form'
         };
 
   return (
@@ -84,7 +90,7 @@ export default function FlyerModal({ isOpen, onClose }) {
             }`}
           >
             <Building2 className="w-3.5 h-3.5" />
-            <span>Classroom Spaces Flyer</span>
+            <span>Classroom on Rent Flyer</span>
           </button>
         </div>
 

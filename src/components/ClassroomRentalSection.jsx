@@ -84,7 +84,7 @@ export default function ClassroomRentalSection({ onOpenFlyerModal }) {
           </h2>
 
           <p className="mt-4 text-base sm:text-lg text-blue-100 max-w-2xl mx-auto leading-relaxed">
-            Classroom sizes engineered for better concentration and faculty - students interaction. All together, 120 to 150 students can accommodate in a single slot at SILT Hub, Exit-D, New Market Metro station.
+            Classroom sizes engineered for better concentration and faculty - students interaction. All together, 120 to 150 students can accommodate in a single slot at SILT Hub, a 10-minute walk (~500 m) from Exit-D, New Market Metro station.
           </p>
         </div>
 
@@ -130,7 +130,10 @@ export default function ClassroomRentalSection({ onOpenFlyerModal }) {
           
           {/* Left Column: Visual Flyer & Facility Photos */}
           <div className="lg:col-span-5 space-y-4">
-            <div className="relative rounded-3xl overflow-hidden border-4 border-amber-400/60 shadow-2xl bg-blue-900 group">
+            <div
+              onClick={() => onOpenFlyerModal && onOpenFlyerModal('classroom')}
+              className="relative rounded-3xl overflow-hidden border-4 border-amber-400/60 shadow-2xl bg-blue-900 group cursor-pointer"
+            >
               <img
                 src="/images/silt-classrooms-flyer.jpg"
                 alt="Looking for Class Rooms? Your Search Ends Here - SILT Education Hub Malakpet Hyderabad"
@@ -141,7 +144,7 @@ export default function ClassroomRentalSection({ onOpenFlyerModal }) {
               <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between gap-2 p-3 rounded-2xl bg-white/95 backdrop-blur-md text-slate-900 shadow-md">
                 <div className="text-left">
                   <span className="text-[10px] font-black uppercase tracking-wider text-blue-800 block">
-                    Exit-D, New Market Metro
+                    10-Min Walk From Metro Exit-D
                   </span>
                   <p className="text-xs sm:text-sm font-black text-slate-900">
                     Classrooms (10-30 Students)
@@ -150,8 +153,11 @@ export default function ClassroomRentalSection({ onOpenFlyerModal }) {
                 {onOpenFlyerModal && (
                   <button
                     type="button"
-                    onClick={onOpenFlyerModal}
-                    className="px-3 py-1.5 rounded-xl text-xs font-black bg-amber-400 hover:bg-amber-300 text-slate-950 transition-all shadow-xs"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onOpenFlyerModal('classroom');
+                    }}
+                    className="px-3 py-1.5 rounded-xl text-xs font-black bg-amber-400 hover:bg-amber-300 text-slate-950 transition-all shadow-xs cursor-pointer"
                   >
                     View Flyer
                   </button>
@@ -260,7 +266,7 @@ export default function ClassroomRentalSection({ onOpenFlyerModal }) {
                 <Wifi className="w-4 h-4 text-amber-300" /> High-Speed Wi-Fi
               </span>
               <span className="flex items-center gap-1.5">
-                <MapPin className="w-4 h-4 text-amber-300" /> Exit-D, New Market Metro
+                <MapPin className="w-4 h-4 text-amber-300" /> 10-Min Walk from Metro Exit-D
               </span>
             </div>
 

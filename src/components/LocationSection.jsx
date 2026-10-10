@@ -54,7 +54,7 @@ export default function LocationSection() {
           </h2>
 
           <p className="mt-4 text-base sm:text-lg text-slate-600">
-            Conveniently situated right at <strong className="text-blue-950 font-bold">Exit-D, New Market Metro station</strong> in Malakpet Extension, Hyderabad.
+            Conveniently situated in Malakpet, Hyderabad — just a <strong className="text-blue-950 font-bold">10-minute walk (approx. 500 m) from Exit-D, New Market Metro station</strong>.
           </p>
         </div>
 
@@ -197,7 +197,7 @@ export default function LocationSection() {
                   <Train className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
                   <div>
                     <strong className="text-slate-900">Metro Transit: </strong>
-                    Take the Hyderabad Metro (Red Line) to <strong>New Market Metro Station</strong>. Take <strong>Exit-D</strong> to reach immediately beside Gunj, Gate - 4.
+                    Take the Hyderabad Metro (Red Line) to <strong>New Market Metro Station</strong>. From <strong>Exit-D</strong>, take an easy 10-minute walk (approx. 500 m) to Beside Gunj, Gate - 4, Saleem Nagar Colony.
                   </div>
                 </div>
 
@@ -354,7 +354,7 @@ export default function LocationSection() {
                       <span className="text-[10px] bg-amber-100 text-amber-900 font-bold px-2 py-0.5 rounded-full ml-auto">4.8★</span>
                     </div>
                     <p className="text-[11px] text-slate-600 leading-tight">
-                      Exit-D, New Market Metro station, Beside Gunj, Malakpet
+                      Beside Gunj, Gate - 4, Saleem Nagar, Malakpet (10-min walk / 500 m from Exit-D Metro)
                     </p>
                     <a
                       href={GOOGLE_MAPS_URL}
@@ -398,7 +398,7 @@ export default function LocationSection() {
                   📍 Beside Gunj, Gate - 4, Saleem Nagar Colony, Malakpet
                 </span>
                 <span className="text-blue-700 font-semibold">
-                  30-second walk directly from Exit-D of New Market Metro
+                  10-minute walk (approx. 500 m) from Exit-D of New Market Metro
                 </span>
               </div>
 

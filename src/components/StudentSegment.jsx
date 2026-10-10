@@ -67,7 +67,7 @@ export default function StudentSegment() {
         <div className="mb-16">
           <div className="text-left mb-6">
             <span className="text-xs font-black uppercase tracking-wider text-blue-700 bg-blue-50 px-3 py-1 rounded-lg">
-              Part 1: Addressing What Students Need Most
+              Addressing What Students Need Most
             </span>
             <h3 className="text-2xl sm:text-3xl font-black text-slate-900 mt-2">
               Transforming Challenges into Academic Confidence
@@ -109,7 +109,7 @@ export default function StudentSegment() {
         <div className="mb-16">
           <div className="text-left mb-6">
             <span className="text-xs font-black uppercase tracking-wider text-amber-800 bg-amber-100 px-3 py-1 rounded-lg">
-              Part 2: Complete Course &amp; Training Offerings
+              Complete Course &amp; Training Offerings
             </span>
             <h3 className="text-2xl sm:text-3xl font-black text-slate-900 mt-2">
               Academic Spectrum from Higher School to Career
@@ -256,7 +256,7 @@ export default function StudentSegment() {
         <div className="bg-gradient-to-br from-blue-950 via-[#0a2346] to-slate-900 rounded-3xl p-6 sm:p-10 lg:p-12 text-white text-left border-4 border-amber-400 shadow-2xl relative overflow-hidden">
           <div className="max-w-3xl space-y-4">
             <span className="inline-block px-3.5 py-1 rounded-full bg-amber-400 text-slate-950 text-xs font-black uppercase tracking-wider">
-              Part 3: Student Registration Portal
+              Student Registration Portal
             </span>
 
             <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white leading-tight">
@@ -277,7 +277,7 @@ export default function StudentSegment() {
               <div className="p-3.5 rounded-2xl bg-white/10 border border-white/15">
                 <span className="text-amber-300 font-black text-xs block mb-1">Step 02</span>
                 <span className="text-xs font-bold text-white block">Academic Counseling</span>
-                <span className="text-[11px] text-blue-200">Meet subject experts at Metro Exit-D</span>
+                <span className="text-[11px] text-blue-200">Meet subject experts near Metro Exit-D (500m)</span>
               </div>
               <div className="p-3.5 rounded-2xl bg-white/10 border border-white/15">
                 <span className="text-amber-300 font-black text-xs block mb-1">Step 03</span>

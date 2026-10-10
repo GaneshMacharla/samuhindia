@@ -19,38 +19,6 @@ export default function Hero({ onOpenFlyerModal }) {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Top Skill Training & Placement Strip (Sunny Gold & Royal Blue) */}
-        <div className="mb-8 p-3.5 sm:p-4 rounded-2xl bg-gradient-to-r from-amber-400 via-amber-300 to-yellow-400 text-slate-950 shadow-md border border-amber-300 flex flex-col md:flex-row items-center justify-between gap-3 text-left">
-          <div className="flex items-center gap-3">
-            <span className="w-10 h-10 rounded-xl bg-blue-950 text-amber-300 flex items-center justify-center shrink-0 shadow-xs">
-              <Gift className="w-5 h-5" />
-            </span>
-            <div>
-              <div className="flex items-center gap-2">
-                <span className="text-[11px] font-black uppercase tracking-wider bg-blue-950 text-amber-300 px-2 py-0.5 rounded-md">
-                  Skill &amp; Placement
-                </span>
-                <span className="text-xs font-bold text-blue-950 hidden sm:inline">• Free &amp; Chargeable Options</span>
-              </div>
-              <p className="text-xs sm:text-sm font-black text-blue-950 mt-0.5">
-                Select Free Skill Training &amp; Placement modules + Chargeable Advanced Professional Tracks!
-              </p>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-2 shrink-0 w-full md:w-auto">
-            <a
-              href={STUDENT_REGISTRATION_FORM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full md:w-auto inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl text-xs font-black bg-blue-950 text-amber-300 hover:bg-blue-900 shadow-md transition-all active:scale-95"
-            >
-              <span>Register on Google Form</span>
-              <ExternalLink className="w-3.5 h-3.5" />
-            </a>
-          </div>
-        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           
@@ -63,10 +31,10 @@ export default function Hero({ onOpenFlyerModal }) {
                 <span className="flex h-2 w-2 rounded-full bg-blue-600 animate-pulse" />
                 <span>Malakpet, Hyderabad</span>
                 <span className="text-blue-300">•</span>
-                <strong className="text-blue-900 font-extrabold">Exit-D, New Market Metro station</strong>
+                <strong className="text-blue-900 font-extrabold">10-Min Walk from Metro Exit-D (~500 m)</strong>
               </div>
 
-              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-50 border border-amber-300 text-amber-900 text-xs sm:text-sm font-bold">
+              <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-amber-50 border border-amber-300 text-amber-900 text-xs sm:text-sm font-bold">
                 <Star className="w-3.5 h-3.5 fill-amber-500 text-amber-500" />
                 <span>4.8 / 5 Rating</span>
                 <span className="text-amber-700/80 hidden sm:inline">(Google Verified)</span>
@@ -91,6 +59,38 @@ export default function Hero({ onOpenFlyerModal }) {
             <p className="text-base sm:text-lg text-slate-700 leading-relaxed font-medium max-w-2xl">
               Get the right guidance from experienced <strong className="text-blue-950 font-bold">Teachers, Instructors, and Subject Experts</strong> at <strong className="text-blue-700 font-extrabold">SILT Hub</strong> — for better understanding, higher scores, and a successful career!
             </p>
+
+            {/* Skill Training & Placement Strip (Sunny Gold & Royal Blue) */}
+            <div className="p-3.5 sm:p-4 rounded-2xl bg-gradient-to-r from-amber-400 via-amber-300 to-yellow-400 text-slate-950 shadow-md border border-amber-300 flex flex-col sm:flex-row items-center justify-between gap-3 text-left">
+              <div className="flex items-center gap-3">
+                <span className="w-10 h-10 rounded-xl bg-blue-950 text-amber-300 flex items-center justify-center shrink-0 shadow-xs">
+                  <Gift className="w-5 h-5" />
+                </span>
+                <div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-[11px] font-black uppercase tracking-wider bg-blue-950 text-amber-300 px-2 py-0.5 rounded-md">
+                      Skill &amp; Placement
+                    </span>
+                    <span className="text-xs font-bold text-blue-950 hidden sm:inline">• Free &amp; Chargeable Options</span>
+                  </div>
+                  <p className="text-xs sm:text-sm font-black text-blue-950 mt-0.5">
+                    Select Free Skill Training &amp; Placement modules + Chargeable Advanced Professional Tracks!
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2 shrink-0 w-full sm:w-auto">
+                <a
+                  href={STUDENT_REGISTRATION_FORM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl text-xs font-black bg-blue-950 text-amber-300 hover:bg-blue-900 shadow-md transition-all active:scale-95"
+                >
+                  <span>Register on Google Form</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+              </div>
+            </div>
 
             {/* 3 Core Segments Jump Navigator */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-1">
@@ -178,7 +178,7 @@ export default function Hero({ onOpenFlyerModal }) {
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-blue-700 shrink-0" />
-                <span>Exit-D, New Market Metro</span>
+                <span>10-Min Walk from Metro Exit-D</span>
               </div>
             </div>
 
