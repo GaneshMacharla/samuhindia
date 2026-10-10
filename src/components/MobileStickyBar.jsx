@@ -1,19 +1,20 @@
 import React from 'react';
-import { Phone, MessageSquare, ExternalLink } from 'lucide-react';
-import { businessInfo, GOOGLE_FORM_URL } from '../data/hubData';
+import { Mail, MessageSquare, ExternalLink } from 'lucide-react';
+import { businessInfo, STUDENT_REGISTRATION_FORM_URL } from '../data/hubData';
 
 export default function MobileStickyBar() {
   return (
     <div className="fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 p-2.5 sm:hidden shadow-2xl">
       <div className="grid grid-cols-3 gap-2">
         
-        {/* Call Now Button */}
+        {/* Email Us Button (Instead of Phone Number) */}
         <a
-          href={businessInfo.phoneTel}
-          className="flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-slate-100 hover:bg-blue-50 text-blue-950 font-bold text-[11px] active:scale-95 transition-all border border-slate-200"
+          href={`mailto:${businessInfo.email}`}
+          className="flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-950 font-bold text-[11px] active:scale-95 transition-all border border-blue-200"
+          title={`Email: ${businessInfo.email}`}
         >
-          <Phone className="w-4 h-4 text-blue-700 mb-0.5" />
-          <span>Call Now</span>
+          <Mail className="w-4 h-4 text-blue-700 mb-0.5" />
+          <span>Email Us</span>
         </a>
 
         {/* WhatsApp Button */}
@@ -29,7 +30,7 @@ export default function MobileStickyBar() {
 
         {/* Student Registration Form Direct Button (Sunny Gold) */}
         <a
-          href={GOOGLE_FORM_URL}
+          href={STUDENT_REGISTRATION_FORM_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-[11px] active:scale-95 transition-all shadow-md border border-amber-300"

@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 
 const EDGE_PATH = 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe';
-const URL = process.env.TEST_URL || 'http://localhost:5174/';
+const URL = process.env.TEST_URL || 'http://localhost:5173/';
 
 async function runTests() {
   console.log('🚀 Starting Automated Verification on Edge...');
@@ -41,43 +41,66 @@ async function runTests() {
     const el = document.querySelector('script[type="application/ld+json"]');
     return el ? JSON.parse(el.textContent) : null;
   });
-  console.log('✓ EducationalOrganization Schema Present:', schemaExists ? `${schemaExists.name} (${schemaExists['@type']})` : 'FAILED');
+  console.log('✓ Schema JSON-LD Present:', schemaExists ? `${schemaExists.name}` : 'FAILED');
 
-  // Check Hero Headline
-  const heroText = await page.evaluate(() => {
-    const h1 = document.querySelector('h1');
-    return h1 ? h1.innerText.replace(/\s+/g, ' ').trim() : '';
+  // Check Metro Mention
+  const metroText = await page.evaluate(() => {
+    return document.body.innerText.includes('Exit-D, New Market Metro station');
   });
-  console.log('✓ Hero Headline:', heroText);
+  console.log('✓ Mentions "Exit-D, New Market Metro station":', metroText ? 'PASSED' : 'FAILED');
+
+  // Check 3 Segments
+  const segments = await page.evaluate(() => {
+    return {
+      segment1: !!document.querySelector('#students'),
+      segment2: !!document.querySelector('#faculty'),
+      segment3: !!document.querySelector('#classrooms'),
+      contact: !!document.querySelector('#contact'),
+    };
+  });
+  console.log('✓ 3 Segments present:', segments);
+
+  // Check Classroom details in Segment III
+  const classroomDetails = await page.evaluate(() => {
+    const text = document.body.innerText;
+    return {
+      tenToThirty: text.includes('10 to 30') || text.includes('10–30'),
+      singleSlot120To150: text.includes('120 to 150') || text.includes('120–150'),
+      computerLab: text.toLowerCase().includes('computer lab'),
+      counselingRooms: text.toLowerCase().includes('counseling room'),
+      pantry: text.toLowerCase().includes('pantry'),
+      separateWashrooms: text.toLowerCase().includes('separate washrooms for girls and boys') || text.toLowerCase().includes('separate washrooms for girls & boys'),
+    };
+  });
+  console.log('✓ Segment III Facilities verified:', classroomDetails);
+
+  // Check CTA Links (No tel links, has email, whatsapp, insta, x)
+  const links = await page.evaluate(() => {
+    return {
+      callLinks: Array.from(document.querySelectorAll('a[href^="tel:"]')).map(a => a.href),
+      emailLinks: Array.from(document.querySelectorAll('a[href^="mailto:"]')).map(a => a.href),
+      waLinks: Array.from(document.querySelectorAll('a[href*="wa.me"]')).map(a => a.href),
+      googleFormLinks: Array.from(document.querySelectorAll('a[href*="forms.gle"]')).map(a => a.href),
+      instaLinks: Array.from(document.querySelectorAll('a[href*="instagram.com/silt.hub"]')).map(a => a.href),
+      xLinks: Array.from(document.querySelectorAll('a[href*="x.com/ProfSMH"]')).map(a => a.href),
+      mapIframe: !!document.querySelector('iframe[src*="openstreetmap.org"], iframe[src*="maps.google.com"]'),
+    };
+  });
+
+  console.log(`✓ Phone 'tel:' CTA links count: ${links.callLinks.length} (Expected 0) -> ${links.callLinks.length === 0 ? 'PASSED' : 'FAILED'}`);
+  console.log(`✓ Email CTA links count: ${links.emailLinks.length}:`, links.emailLinks[0]);
+  console.log(`✓ WhatsApp CTA links count: ${links.waLinks.length}:`, links.waLinks[0]);
+  console.log(`✓ Google Form links count: ${links.googleFormLinks.length}:`, links.googleFormLinks[0]);
+  console.log(`✓ Instagram links count: ${links.instaLinks.length}:`, links.instaLinks[0]);
+  console.log(`✓ X (Twitter) links count: ${links.xLinks.length}:`, links.xLinks[0]);
+  console.log(`✓ Embedded Google Maps Iframe:`, links.mapIframe ? 'PASSED' : 'FAILED');
 
   // Take Full Desktop Screenshot
   await page.screenshot({ path: 'public/images/test-desktop-full.png', fullPage: true });
   console.log('✓ Full page desktop screenshot saved to public/images/test-desktop-full.png');
 
-  // Check CTA Links
-  const links = await page.evaluate(() => {
-    return {
-      callLinks: Array.from(document.querySelectorAll('a[href^="tel:"]')).map(a => a.href),
-      waLinks: Array.from(document.querySelectorAll('a[href*="wa.me"]')).map(a => a.href),
-      googleFormLinks: Array.from(document.querySelectorAll('a[href*="forms.gle"]')).map(a => a.href),
-      mapsLinks: Array.from(document.querySelectorAll('a[href*="maps.app.goo.gl"], a[href*="google.com/maps"]')).map(a => a.href),
-    };
-  });
-
-  console.log(`✓ Verified ${links.callLinks.length} Phone CTA links:`, links.callLinks[0]);
-  console.log(`✓ Verified ${links.waLinks.length} WhatsApp CTA links:`, links.waLinks[0]);
-  console.log(`✓ Verified ${links.googleFormLinks.length} Google Form links:`, links.googleFormLinks[0]);
-  console.log(`✓ Verified ${links.mapsLinks.length} Google Maps / Directions links`);
-
-  // 2. Testing Tablet View
-  console.log('\n--- 2. Testing Tablet View (768x1024) ---');
-  await page.setViewport({ width: 768, height: 1024 });
-  await page.goto(URL, { waitUntil: 'networkidle0' });
-  await page.screenshot({ path: 'public/images/test-tablet.png', fullPage: false });
-  console.log('✓ Tablet screenshot saved to public/images/test-tablet.png');
-
-  // 3. Testing Mobile View
-  console.log('\n--- 3. Testing Mobile View (390x844) ---');
+  // 2. Testing Mobile View (390x844)
+  console.log('\n--- 2. Testing Mobile View (390x844) ---');
   await page.setViewport({ width: 390, height: 844 });
   await page.goto(URL, { waitUntil: 'networkidle0' });
 
@@ -87,20 +110,21 @@ async function runTests() {
   });
   console.log('✓ Mobile Horizontal Overflow Check:', hasHorizontalScroll ? 'FAILED (Overflow detected)' : 'PASSED (Zero overflow)');
 
-  // Check Mobile Sticky Bar Links
+  // Check Mobile Sticky Bar Links (Email | WhatsApp | Student Form)
   const mobileBar = await page.evaluate(() => {
     const callBtn = document.querySelector('div.fixed.bottom-0 a[href^="tel:"]');
+    const emailBtn = document.querySelector('div.fixed.bottom-0 a[href^="mailto:"]');
     const waBtn = document.querySelector('div.fixed.bottom-0 a[href*="wa.me"]');
     const formBtn = document.querySelector('div.fixed.bottom-0 a[href*="forms.gle"]');
-    return { callBtn: !!callBtn, waBtn: !!waBtn, formBtn: !!formBtn };
+    return { callBtn: !!callBtn, emailBtn: !!emailBtn, waBtn: !!waBtn, formBtn: !!formBtn };
   });
-  console.log('✓ Mobile Sticky Bottom Bar (Call | WhatsApp | Google Form):', mobileBar);
+  console.log('✓ Mobile Sticky Bottom Bar (Email | WhatsApp | Student Form):', mobileBar);
 
   await page.screenshot({ path: 'public/images/test-mobile.png', fullPage: false });
   console.log('✓ Mobile screenshot saved to public/images/test-mobile.png');
 
   // Diagnostics Summary
-  console.log('\n--- 4. Diagnostics Summary ---');
+  console.log('\n--- 3. Diagnostics Summary ---');
   console.log('Console Errors count:', consoleErrors.length);
   if (consoleErrors.length > 0) {
     consoleErrors.forEach(e => console.log('  [Console Error]:', e));
@@ -112,10 +136,10 @@ async function runTests() {
 
   await browser.close();
 
-  if (consoleErrors.length === 0 && pageErrors.length === 0 && !hasHorizontalScroll) {
+  if (consoleErrors.length === 0 && pageErrors.length === 0 && !hasHorizontalScroll && links.callLinks.length === 0) {
     console.log('\n✅ All automated verification tests completed successfully!');
   } else {
-    console.log('\n⚠️ Some checks reported errors.');
+    console.log('\n⚠️ Some checks reported issues.');
   }
 }
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, MessageSquare, MapPin, Clock, Star, ExternalLink, Sparkles } from 'lucide-react';
+import { Mail, MessageSquare, MapPin, Clock, Star, ExternalLink, Sparkles } from 'lucide-react';
 import {
   businessInfo,
   STUDENT_REGISTRATION_FORM_URL,
@@ -55,125 +55,127 @@ export default function Footer({ onOpenFlyerModal }) {
               </div>
             </div>
 
-            {/* Quick Contact Buttons */}
+            {/* Quick Contact & Social Buttons (Email, WhatsApp, Socials) */}
             <div className="flex flex-wrap items-center gap-2.5 pt-2">
               <a
-                href={businessInfo.phoneTel}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold text-white bg-white/10 hover:bg-white/20 border border-white/20 transition-colors"
+                href={`mailto:${businessInfo.email}`}
+                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-bold text-white bg-white/10 hover:bg-white/20 border border-white/20 transition-colors"
+                title={`Email: ${businessInfo.email}`}
               >
-                <Phone className="w-3.5 h-3.5 text-amber-400" />
-                <span>{businessInfo.phone}</span>
+                <Mail className="w-3.5 h-3.5 text-amber-400" />
+                <span>{businessInfo.email}</span>
               </a>
 
               <a
                 href={businessInfo.whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold text-emerald-300 bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-500/40 transition-colors"
+                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-bold text-emerald-300 bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-500/40 transition-colors"
               >
                 <MessageSquare className="w-3.5 h-3.5 text-emerald-400" />
                 <span>WhatsApp</span>
               </a>
 
-              {onOpenFlyerModal && (
-                <button
-                  type="button"
-                  onClick={onOpenFlyerModal}
-                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold text-amber-300 bg-amber-400/10 hover:bg-amber-400/20 border border-amber-400/30 transition-colors"
-                >
-                  <span>Launch Flyer</span>
-                </button>
-              )}
+              {/* Instagram */}
+              <a
+                href={businessInfo.socials.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold text-pink-300 bg-pink-500/20 hover:bg-pink-500/30 border border-pink-500/40 transition-colors"
+                title="Instagram @silt.hub"
+              >
+                <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                </svg>
+                <span>Instagram</span>
+              </a>
+
+              {/* X */}
+              <a
+                href={businessInfo.socials.x}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold text-slate-200 bg-white/10 hover:bg-white/20 border border-white/20 transition-colors"
+                title="X @ProfSMH"
+              >
+                <svg className="w-3 h-3" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+                <span>X Profile</span>
+              </a>
             </div>
           </div>
 
-          {/* Quick Navigation & Registration Links */}
+          {/* Quick Navigation: 3 Segments & Official Forms */}
           <div className="lg:col-span-3 space-y-3">
             <h4 className="text-xs font-black uppercase tracking-wider text-white">
-              Navigation &amp; Registration
+              The 3 Core Segments
             </h4>
             <ul className="space-y-2 text-sm text-blue-200">
               <li>
-                <a href="#about" className="hover:text-white transition-colors">
-                  About SILT Hub
+                <a href="#students" className="hover:text-amber-300 transition-colors font-bold text-white flex items-center gap-1">
+                  <span>I. For Students</span>
                 </a>
               </li>
-              <li>
-                <a href="#courses" className="hover:text-white transition-colors">
-                  All Courses
-                </a>
-              </li>
-              <li>
-                <a
-                  href={STUDENT_REGISTRATION_FORM_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-amber-300 hover:underline flex items-center gap-1 font-black"
-                >
+              <li className="pl-3 text-xs text-blue-300">
+                <a href={STUDENT_REGISTRATION_FORM_URL} target="_blank" rel="noopener noreferrer" className="text-amber-300 hover:underline flex items-center gap-1">
                   <span>★ Student Registration Form</span>
                   <ExternalLink className="w-3 h-3" />
                 </a>
               </li>
               <li>
-                <a href="#skill-placement" className="hover:text-amber-300 transition-colors font-bold text-amber-400">
-                  Skill &amp; Placement Tracks
+                <a href="#faculty" className="hover:text-amber-300 transition-colors font-bold text-white flex items-center gap-1">
+                  <span>II. For Faculty &amp; Mentors</span>
                 </a>
               </li>
-              <li>
-                <a
-                  href={FACULTY_REGISTRATION_FORM_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-200 hover:text-white hover:underline flex items-center gap-1"
-                >
+              <li className="pl-3 text-xs text-blue-300">
+                <a href={FACULTY_REGISTRATION_FORM_URL} target="_blank" rel="noopener noreferrer" className="hover:underline flex items-center gap-1">
                   <span>Faculty Registration Form</span>
                   <ExternalLink className="w-3 h-3" />
                 </a>
               </li>
               <li>
-                <a
-                  href={CLASSROOM_RENTAL_FORM_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-emerald-300 hover:text-emerald-200 hover:underline flex items-center gap-1 font-semibold"
-                >
+                <a href="#classrooms" className="hover:text-amber-300 transition-colors font-bold text-white flex items-center gap-1">
+                  <span>III. Classrooms &amp; Campus</span>
+                </a>
+              </li>
+              <li className="pl-3 text-xs text-blue-300">
+                <a href={CLASSROOM_RENTAL_FORM_URL} target="_blank" rel="noopener noreferrer" className="text-emerald-300 hover:underline flex items-center gap-1 font-semibold">
                   <span>Classroom Rental Form</span>
                   <ExternalLink className="w-3 h-3" />
                 </a>
               </li>
-              <li>
-                <a href="#faculty" className="hover:text-white transition-colors">
-                  Faculty &amp; Mentor Hiring
+              <li className="pt-2 border-t border-blue-900">
+                <a href="#contact" className="hover:text-white transition-colors">
+                  Contact &amp; Location
                 </a>
               </li>
-              <li>
-                <a href="#classrooms" className="hover:text-white transition-colors">
-                  Classrooms For Rent
-                </a>
-              </li>
-              <li>
-                <a href="#why-silt" className="hover:text-white transition-colors">
-                  6 Core Pillars
-                </a>
-              </li>
-              <li>
-                <a href="#location" className="hover:text-white transition-colors">
-                  Metro Exit-D Location
-                </a>
-              </li>
+              {onOpenFlyerModal && (
+                <li>
+                  <button
+                    type="button"
+                    onClick={onOpenFlyerModal}
+                    className="text-amber-300 hover:underline text-xs"
+                  >
+                    View Official Announcement Flyer
+                  </button>
+                </li>
+              )}
             </ul>
           </div>
 
           {/* Official Location */}
           <div className="lg:col-span-4 space-y-3 text-sm">
             <h4 className="text-xs font-black uppercase tracking-wider text-white">
-              Hub Location
+              Center Location
             </h4>
             
             <div className="flex items-start gap-2.5 text-blue-100">
               <MapPin className="w-4 h-4 text-amber-400 shrink-0 mt-1" />
               <div className="leading-relaxed text-xs sm:text-sm">
-                <p className="font-bold text-white">{businessInfo.address.line1}</p>
+                <p className="font-extrabold text-amber-300">{businessInfo.address.metro}</p>
                 <p>{businessInfo.address.line2}</p>
                 <p>{businessInfo.address.line3}</p>
                 <p>{businessInfo.address.city}, {businessInfo.address.state} - {businessInfo.address.pincode}</p>
@@ -210,7 +212,7 @@ export default function Footer({ onOpenFlyerModal }) {
               &copy; {currentYear} {businessInfo.name}. All rights reserved.
             </p>
             <p className="text-[11px] text-blue-400">
-              Beside Gunj, Saleem Nagar, Malakpet, Hyderabad. Direct access at Exit-D, New Market Metro.
+              Exit-D, New Market Metro station, Beside Gunj, Saleem Nagar, Malakpet, Hyderabad.
             </p>
           </div>
 

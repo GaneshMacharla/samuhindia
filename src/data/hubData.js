@@ -7,7 +7,11 @@ export const STUDENT_REGISTRATION_FORM_URL = "https://forms.gle/wgLcag7Eg7Hw3PVZ
 export const FACULTY_REGISTRATION_FORM_URL = "https://forms.gle/ECdK7qZhB1R6WVP29";
 export const CLASSROOM_RENTAL_FORM_URL = "https://forms.gle/b3M4xQ1Vjqx4WypB7";
 export const GOOGLE_FORM_URL = STUDENT_REGISTRATION_FORM_URL;
-export const GOOGLE_MAPS_URL = "https://maps.app.goo.gl/2ySS4EZ3b8gARGgz8?g_st=ac";
+
+// Robust, universal Google Maps URLs that open directly in Google Maps on all devices
+export const GOOGLE_MAPS_URL = "https://www.google.com/maps/search/?api=1&query=SAMUH+INDIA+Learning+%26+Training+Hub+Malakpet+Hyderabad";
+export const GOOGLE_MAPS_PLACE_URL = "https://www.google.com/maps/place/SAMUH+INDIA+Learning+%26+Training+Hub,+New+Market,+1st+Floor+Pillar+no+2463,+Metro+Station+H.+No:+16-11-1%2F5%2F6%2F1+beside+Gunj,+Saleem+Nagar+Colony,+Malakpet,+Hyderabad,+Telangana+500036";
+export const GOOGLE_MAPS_EMBED_URL = "https://www.openstreetmap.org/export/embed.html?bbox=78.4970%2C17.3705%2C78.5060%2C17.3765&layer=mapnik&marker=17.3734%2C78.5015";
 
 export const businessInfo = {
   name: "Samuh India Learning & Training (SILT) Hub",
@@ -26,20 +30,29 @@ export const businessInfo = {
     "Get the right guidance from experienced Teachers, Instructors and Subject Experts at SILT Hub — for better understanding, higher scores and a successful career!",
   category: "Education & Career Development Hub",
   
-  // Contact & Channels
-  phone: "9849228757",
-  phoneDisplay: "+91 98492 28757",
-  phoneTel: "tel:9849228757",
+  // Official Contact Channels (Email & WhatsApp - No phone number displayed)
+  email: "samuh.india@gmail.com",
   whatsappNumber: "919849228757",
+  whatsappDisplay: "+91 98492 28757",
   whatsappLink:
-    "https://wa.me/919849228757?text=Hi%20SILT%20Hub%2C%20I%20would%20like%20to%20enquire%20about%20student%20registration%2C%20classroom%20rentals%2C%20and%20faculty%20opportunities.",
+    "https://wa.me/919849228757?text=Hi%20SILT%20Hub%2C%20I%20would%20like%20to%20enquire%20about%20student%20courses%2C%20classroom%20spaces%2C%20and%20faculty%20opportunities.",
+
+  // Official Social Media Profiles
+  socials: {
+    instagram: "https://www.instagram.com/silt.hub?utm_source=qr&exln=MXhxMXFkZXE5Y3pmdw==",
+    instagramHandle: "@silt.hub",
+    x: "https://x.com/ProfSMH",
+    xHandle: "@ProfSMH",
+  },
   
-  // Official Form Links (Google Forms)
+  // Official Google Form URLs
   studentFormUrl: STUDENT_REGISTRATION_FORM_URL,
   facultyFormUrl: FACULTY_REGISTRATION_FORM_URL,
   classroomRentalFormUrl: CLASSROOM_RENTAL_FORM_URL,
   googleFormUrl: STUDENT_REGISTRATION_FORM_URL,
   googleMapsUrl: GOOGLE_MAPS_URL,
+  googleMapsPlaceUrl: GOOGLE_MAPS_PLACE_URL,
+  googleMapsEmbedUrl: GOOGLE_MAPS_EMBED_URL,
 
   // Skill Training & Placement Initiative (Free & Chargeable)
   skillCourseOffer: {
@@ -50,15 +63,53 @@ export const businessInfo = {
     targetAudience: "Graduates, Job Seekers & College Students",
   },
 
-  // Address
+  // Campus Capacity & Facilities Specifications (Segment III)
+  facilities: {
+    classroomSizeMin: 10,
+    classroomSizeMax: 30,
+    classroomSizeSummary: "Classrooms of sizes from 10 to 30 Students",
+    interactionBenefit: "Better concentration and faculty - students interaction",
+    totalSlotCapacityMin: 120,
+    totalSlotCapacityMax: 150,
+    totalSlotCapacitySummary: "120 to 150 Students can accommodate in a single slot",
+    features: [
+      {
+        title: "Classrooms of 10 to 30 Students",
+        desc: "Ideal room sizes engineered for better concentration, active student participation, and personalized faculty-student interaction."
+      },
+      {
+        title: "120 to 150 Single-Slot Capacity",
+        desc: "Multiple well-ventilated, air-conditioned rooms accommodate 120 to 150 students simultaneously across different batches."
+      },
+      {
+        title: "Modern Computer Lab",
+        desc: "Fully equipped with networked computers and high-speed internet for IT training, digital skills, and online exam simulations."
+      },
+      {
+        title: "Private Counseling Rooms",
+        desc: "Quiet, dedicated counseling and consultation rooms for 1-on-1 student mentoring, doubt clarification, and parent meetings."
+      },
+      {
+        title: "Refreshment Pantry",
+        desc: "Clean pantry space with filtered drinking water, tea/coffee facilities, and break area for faculty and learners."
+      },
+      {
+        title: "Separate Washrooms for Girls & Boys",
+        desc: "Clean, hygienic, secure, and maintained separate washroom facilities ensuring comfort and privacy."
+      }
+    ]
+  },
+
+  // Address - Explicitly featuring Exit-D, New Market Metro Station
   address: {
+    metro: "Exit-D, New Market Metro station",
     line1: "Near New Market Metro Station Exit-D",
-    line2: "Beside Gunj, Saleem Nagar Colony, Gate - 4",
+    line2: "Beside Gunj, Gate - 4, Saleem Nagar Colony",
     line3: "Malakpet Extension",
     city: "Hyderabad",
     state: "Telangana",
     pincode: "500036",
-    full: "Near New Market Metro Station Exit-D, Beside Gunj, Saleem Nagar, Malakpet, Hyderabad, Telangana 500036",
+    full: "Exit-D, New Market Metro station, Beside Gunj, Gate - 4, Saleem Nagar Colony, Malakpet, Hyderabad, Telangana 500036",
     landmark: "Beside Gunj, Gate - 4, Saleem Nagar, Exit-D of New Market Metro Station"
   },
 
@@ -76,7 +127,7 @@ export const businessInfo = {
 };
 
 /**
- * Course Categories formatted with the vibrant color coding from the flyer
+ * Course Categories formatted with vibrant color coding
  */
 export const programs = [
   {
@@ -282,7 +333,7 @@ export const corePillars = [
     id: "personal",
     title: "Personalised Attention",
     tagline: "Doubt clearing & individual support",
-    description: "Small interactive groups and dedicated 1-on-1 discussion desks ensuring no learner is left behind.",
+    description: "Small interactive groups (10 to 30 students) ensuring no learner is left behind.",
     badge: "Individual Care",
     color: "purple"
   },
@@ -313,67 +364,25 @@ export const corePillars = [
 ];
 
 /**
- * 5 Student Impact Points from the Official Student Flyer
+ * Student Needs Pillars
  */
-export const studentImpactPillars = [
+export const studentNeedsList = [
   {
-    id: "concepts",
-    title: "Clear Concepts",
-    tagline: "Understand not just memorize",
-    icon: "Lightbulb",
-    color: "amber"
+    title: "Concept Clarity Over Memorization",
+    desc: "Overcome fear of difficult subjects with intuitive, step-by-step visual explanations and foundational clinics."
   },
   {
-    id: "guidance",
-    title: "Expert Guidance",
-    tagline: "Learn from experienced faculty",
-    icon: "GraduationCap",
-    color: "emerald"
+    title: "Personalized Focus (10–30 Cohorts)",
+    desc: "Classroom sizes capped from 10 to 30 students ensuring teachers know every learner's strengths and doubt points."
   },
   {
-    id: "performance",
-    title: "Better Performance",
-    tagline: "Score higher in exams",
-    icon: "Target",
-    color: "purple"
+    title: "Board & University Exam Booster",
+    desc: "Targeted unit tests, model answers, derivations, and question paper solving for CBSE, ICSE, TG State & Universities."
   },
   {
-    id: "grades",
-    title: "Excellent Grades",
-    tagline: "Build confidence and skills",
-    icon: "TrendingUp",
-    color: "blue"
-  },
-  {
-    id: "career",
-    title: "Successful Career",
-    tagline: "Turn your dreams into reality",
-    icon: "Award",
-    color: "rose"
+    title: "Career & Placement Readiness",
+    desc: "Job-ready IT skills, spoken English, resume building, and placement opportunities for college students and graduates."
   }
-];
-
-/**
- * Key Subjects Covered from Official Flyer
- */
-export const coveredSubjects = [
-  { name: "Engineering", details: "Mechanical, ECE, CSE, Civil, etc." },
-  { name: "Science", details: "Physics, Chemistry, Mathematics, etc." },
-  { name: "Commerce & Management", details: "Accounts, Finance, Economics, Business" },
-  { name: "Competitive Exams", details: "JEE, NEET, EAPCET, POLYCET, UPSC, etc." },
-  { name: "Languages & Soft Skills", details: "English, Communication, Personality Prep" },
-  { name: "And More...", details: "Any Subject... Any Exam... We Have the Right Expert for You!" }
-];
-
-/**
- * 5 Reasons to Choose SILT Hub from the Official Flyer
- */
-export const whyChooseList = [
-  "Experienced & Qualified Faculty",
-  "Interactive & Result-Oriented Learning",
-  "Flexible Batches & Personalized Attention",
-  "Regular Tests & Performance Tracking",
-  "Support for Career Guidance & Skill Development"
 ];
 
 /**
@@ -391,7 +400,7 @@ export const centerPhotos = [
   {
     src: "/images/silt-classrooms-flyer.jpg",
     alt: "SILT Education Hub Classroom Spaces Available in Malakpet",
-    caption: "Classroom Spaces for Teachers & Faculty",
+    caption: "Classroom Spaces (10-30 Students) for Teachers & Faculty",
     tag: "Classrooms",
     isFlyer: true,
     flyerType: "classroom"
@@ -399,14 +408,14 @@ export const centerPhotos = [
   {
     src: "/images/classroom-front.png",
     alt: "SAMUH INDIA Classroom with whiteboard and student seating desks",
-    caption: "Interactive Classroom Setup",
+    caption: "Interactive Classroom (10-30 Seating)",
     tag: "Classroom"
   },
   {
     src: "/images/counseling-desk.png",
     alt: "SAMUH INDIA Counseling and consultation meeting table",
-    caption: "One-on-One Discussion Hub",
-    tag: "Mentorship"
+    caption: "Private Counseling Room",
+    tag: "Counseling"
   },
   {
     src: "/images/classroom-overview.png",

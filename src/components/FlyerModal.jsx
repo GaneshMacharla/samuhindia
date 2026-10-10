@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Download, Phone, MessageSquare, ExternalLink, GraduationCap, Building2 } from 'lucide-react';
+import { X, Download, Mail, MessageSquare, ExternalLink, GraduationCap, Building2 } from 'lucide-react';
 import { businessInfo, STUDENT_REGISTRATION_FORM_URL, CLASSROOM_RENTAL_FORM_URL } from '../data/hubData';
 
 export default function FlyerModal({ isOpen, onClose }) {
@@ -23,7 +23,7 @@ export default function FlyerModal({ isOpen, onClose }) {
           alt: 'SILT Education Hub Classroom Spaces Available Flyer - Malakpet Hyderabad',
           downloadName: 'SILT-Classrooms-Space-Flyer.jpg',
           title: 'Classroom Spaces Announcement Flyer',
-          desc: 'Modern partitioned classrooms for teachers, tutors & institutions',
+          desc: 'Modern classrooms (10-30 students) for teachers, tutors & institutions',
           formUrl: CLASSROOM_RENTAL_FORM_URL,
           formBtnText: 'Classroom Rental Form'
         };
@@ -132,11 +132,11 @@ export default function FlyerModal({ isOpen, onClose }) {
             </a>
 
             <a
-              href={businessInfo.phoneTel}
+              href={`mailto:${businessInfo.email}`}
               className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold text-white bg-blue-950 hover:bg-blue-900 transition-colors"
             >
-              <Phone className="w-3.5 h-3.5 text-amber-300" />
-              <span>{businessInfo.phone}</span>
+              <Mail className="w-3.5 h-3.5 text-amber-300" />
+              <span>Email Us</span>
             </a>
           </div>
         </div>

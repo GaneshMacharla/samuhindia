@@ -2,12 +2,9 @@ import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import TrustStrip from './components/TrustStrip';
-import AboutSection from './components/AboutSection';
-import ProgramsSection from './components/ProgramsSection';
-import WhyChooseUs from './components/WhyChooseUs';
+import StudentSegment from './components/StudentSegment';
 import FacultyMentorSection from './components/FacultyMentorSection';
 import ClassroomRentalSection from './components/ClassroomRentalSection';
-import GoogleFormPortal from './components/GoogleFormPortal';
 import ReviewsSection from './components/ReviewsSection';
 import LocationSection from './components/LocationSection';
 import Footer from './components/Footer';
@@ -22,55 +19,46 @@ export default function App() {
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 flex flex-col antialiased selection:bg-amber-200 selection:text-slate-900">
       
-      {/* 1. Header Navigation */}
+      {/* 1. Header Navigation with 3 Segments & Quick CTAs */}
       <Navbar onOpenFlyerModal={() => setIsFlyerModalOpen(true)} />
 
-      {/* Main Content */}
+      {/* Main Content Organized into 3 Core Segments */}
       <main className="flex-1">
-        {/* 2. Vibrant Hero Section */}
+        {/* 2. Hero Section featuring Exit-D New Market Metro & 3 Segments Navigator */}
         <Hero onOpenFlyerModal={() => setIsFlyerModalOpen(true)} />
 
-        {/* 3. Trust Strip */}
+        {/* 3. Verified Trust Strip */}
         <TrustStrip />
 
-        {/* 4. About SILT Hub & Mission */}
-        <AboutSection onOpenFlyerModal={() => setIsFlyerModalOpen(true)} />
+        {/* 4. SEGMENT I: Students Needs, Offerings & Registrations */}
+        <StudentSegment />
 
-        {/* 5. Complete Course Spectrum with Category Filter & Free Graduate Course */}
-        <ProgramsSection />
-
-        {/* 6. Why Choose SILT Hub (6 Core Pillars from Flyer) */}
-        <WhyChooseUs />
-
-        {/* 7. Official Registration Portals (STUDENT REGISTRATION FORM FIRST) */}
-        <GoogleFormPortal />
-
-        {/* 8. Faculty, Mentors & Academic Partners Recruitment */}
+        {/* 5. SEGMENT II: Faculty Requirements, Expectations & Registration */}
         <FacultyMentorSection />
 
-        {/* 9. Classroom Spaces For Rent (Hourly/Daily/Monthly) */}
+        {/* 6. SEGMENT III: Classrooms (10-30 Capacity, 120-150 Slot Capacity, Lab, Pantry, Washrooms) */}
         <ClassroomRentalSection onOpenFlyerModal={() => setIsFlyerModalOpen(true)} />
 
-        {/* 9. Verified Google Reviews */}
+        {/* 7. Verified Google Reviews */}
         <ReviewsSection />
 
-        {/* 10. Center Location & Metro Exit-D Navigation */}
+        {/* 8. Contact Details with Address, Email, WhatsApp, Instagram & X Profiles, and Google Maps */}
         <LocationSection />
       </main>
 
-      {/* 11. Footer */}
+      {/* 9. Footer */}
       <Footer onOpenFlyerModal={() => setIsFlyerModalOpen(true)} />
 
-      {/* 12. Mobile Sticky Bottom Action Bar (Call | WhatsApp | Google Form) */}
+      {/* 10. Mobile Sticky Bottom Action Bar (Email Us | WhatsApp | Student Form) */}
       <MobileStickyBar />
 
-      {/* 13. Official Launch Flyer Lightbox Modal */}
+      {/* 11. Official Launch Flyer Lightbox Modal */}
       <FlyerModal
         isOpen={isFlyerModalOpen}
         onClose={() => setIsFlyerModalOpen(false)}
       />
 
-      {/* 14. Google Verification Modal */}
+      {/* 12. Google Verification Modal */}
       <GoogleVerificationModal
         isOpen={isVerifyModalOpen}
         onClose={() => setIsVerifyModalOpen(false)}

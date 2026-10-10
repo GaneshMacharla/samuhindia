@@ -1,6 +1,6 @@
 import React from 'react';
-import { Phone, MessageSquare, ExternalLink, Star, MapPin, CheckCircle2, Sparkles, GraduationCap, Eye, Gift } from 'lucide-react';
-import { businessInfo, GOOGLE_FORM_URL } from '../data/hubData';
+import { Mail, MessageSquare, ExternalLink, Star, MapPin, CheckCircle2, Sparkles, GraduationCap, Users, Building2, Eye, Gift } from 'lucide-react';
+import { businessInfo, STUDENT_REGISTRATION_FORM_URL } from '../data/hubData';
 
 export default function Hero({ onOpenFlyerModal }) {
   return (
@@ -20,7 +20,7 @@ export default function Hero({ onOpenFlyerModal }) {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Top Skill Training & Placement Announcement Strip (Sunny Gold & Royal Blue) */}
+        {/* Top Skill Training & Placement Strip (Sunny Gold & Royal Blue) */}
         <div className="mb-8 p-3.5 sm:p-4 rounded-2xl bg-gradient-to-r from-amber-400 via-amber-300 to-yellow-400 text-slate-950 shadow-md border border-amber-300 flex flex-col md:flex-row items-center justify-between gap-3 text-left">
           <div className="flex items-center gap-3">
             <span className="w-10 h-10 rounded-xl bg-blue-950 text-amber-300 flex items-center justify-center shrink-0 shadow-xs">
@@ -41,7 +41,7 @@ export default function Hero({ onOpenFlyerModal }) {
 
           <div className="flex items-center gap-2 shrink-0 w-full md:w-auto">
             <a
-              href={GOOGLE_FORM_URL}
+              href={STUDENT_REGISTRATION_FORM_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full md:w-auto inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl text-xs font-black bg-blue-950 text-amber-300 hover:bg-blue-900 shadow-md transition-all active:scale-95"
@@ -57,13 +57,13 @@ export default function Hero({ onOpenFlyerModal }) {
           {/* Left Column: Headline, Copy & CTAs */}
           <div className="lg:col-span-7 space-y-6 text-left">
             
-            {/* Badges Row */}
+            {/* Badges Row - Explicitly showing Exit-D, New Market Metro station */}
             <div className="inline-flex flex-wrap items-center gap-2.5">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-100/80 border border-blue-200 text-blue-950 text-xs sm:text-sm font-bold shadow-xs">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-100/90 border border-blue-200 text-blue-950 text-xs sm:text-sm font-bold shadow-xs">
                 <span className="flex h-2 w-2 rounded-full bg-blue-600 animate-pulse" />
                 <span>Malakpet, Hyderabad</span>
                 <span className="text-blue-300">•</span>
-                <span className="text-blue-800">Exit-D Metro Station</span>
+                <strong className="text-blue-900 font-extrabold">Exit-D, New Market Metro station</strong>
               </div>
 
               <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-50 border border-amber-300 text-amber-900 text-xs sm:text-sm font-bold">
@@ -79,8 +79,8 @@ export default function Hero({ onOpenFlyerModal }) {
               <span>{businessInfo.motto} • {businessInfo.heroPunchline}</span>
             </div>
 
-            {/* Flyer Hook Main Headline (Royal Blue & Sunny Amber) */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[50px] font-black text-blue-950 tracking-tight leading-[1.14]">
+            {/* Flyer Hook Main Headline */}
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-black text-blue-950 tracking-tight leading-[1.15]">
               Struggling to Understand Concepts?{' '}
               <span className="text-blue-600 block sm:inline">
                 You’re Not Alone!
@@ -89,39 +89,68 @@ export default function Hero({ onOpenFlyerModal }) {
 
             {/* Flyer Supporting Copy */}
             <p className="text-base sm:text-lg text-slate-700 leading-relaxed font-medium max-w-2xl">
-              Get the right guidance from experienced <strong className="text-blue-950 font-bold">Teachers, Instructors, and Subject Experts</strong> at <strong className="text-blue-700">SILT Hub</strong> — for better understanding, higher scores, and a successful career!
+              Get the right guidance from experienced <strong className="text-blue-950 font-bold">Teachers, Instructors, and Subject Experts</strong> at <strong className="text-blue-700 font-extrabold">SILT Hub</strong> — for better understanding, higher scores, and a successful career!
             </p>
 
-            {/* All Streams Pill */}
-            <div className="p-3.5 rounded-2xl bg-white border border-blue-200 text-xs sm:text-sm text-slate-700 shadow-xs flex items-center gap-2.5">
-              <span className="px-2.5 py-1 rounded-lg bg-blue-900 text-amber-300 font-black shrink-0 text-xs">
-                Higher School to Career
-              </span>
-              <span className="font-medium">Higher School (9th &amp; 10th) • Inter (11th &amp; 12th CBSE / ICSE / TG State Board) • All Higher Studies (Degree, Engg, Medical, Pharmacy) • Skill &amp; Placement</span>
+            {/* 3 Core Segments Jump Navigator */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-1">
+              <a
+                href="#students"
+                className="p-3 rounded-2xl bg-white border border-blue-200 hover:border-amber-400 hover:shadow-md transition-all group flex flex-col"
+              >
+                <div className="flex items-center gap-1.5 text-xs font-black text-blue-900 group-hover:text-amber-600 mb-1">
+                  <GraduationCap className="w-4 h-4 text-blue-600 group-hover:text-amber-500" />
+                  <span>I. Students</span>
+                </div>
+                <span className="text-[11px] text-slate-600 leading-snug">Needs, course offerings &amp; registration</span>
+              </a>
+
+              <a
+                href="#faculty"
+                className="p-3 rounded-2xl bg-white border border-blue-200 hover:border-blue-400 hover:shadow-md transition-all group flex flex-col"
+              >
+                <div className="flex items-center gap-1.5 text-xs font-black text-blue-900 group-hover:text-blue-600 mb-1">
+                  <Users className="w-4 h-4 text-blue-600" />
+                  <span>II. Faculty</span>
+                </div>
+                <span className="text-[11px] text-slate-600 leading-snug">Requirements, expectations &amp; join us</span>
+              </a>
+
+              <a
+                href="#classrooms"
+                className="p-3 rounded-2xl bg-white border border-blue-200 hover:border-emerald-400 hover:shadow-md transition-all group flex flex-col"
+              >
+                <div className="flex items-center gap-1.5 text-xs font-black text-blue-900 group-hover:text-emerald-600 mb-1">
+                  <Building2 className="w-4 h-4 text-emerald-600" />
+                  <span>III. Classrooms</span>
+                </div>
+                <span className="text-[11px] text-slate-600 leading-snug">10-30 batch size, 120-150 single-slot capacity</span>
+              </a>
             </div>
 
-            {/* CTAs: GOOGLE FORM ONLY */}
+            {/* CTAs: GOOGLE FORM & EMAIL & WHATSAPP (NO PHONE DISPLAY) */}
             <div className="pt-2 flex flex-wrap items-center gap-3 sm:gap-4">
               
-              {/* PRIMARY ACTION: DIRECT STUDENT GOOGLE FORM (Bright Sunny Gold) */}
+              {/* PRIMARY ACTION: DIRECT STUDENT GOOGLE FORM */}
               <a
-                href={GOOGLE_FORM_URL}
+                href={STUDENT_REGISTRATION_FORM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                id="hero-google-form-cta"
-                className="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-2xl text-base font-black text-slate-950 bg-amber-400 hover:bg-amber-300 active:scale-95 transition-all shadow-lg shadow-amber-400/30 border border-amber-300 group"
+                id="hero-student-form-cta"
+                className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-2xl text-sm sm:text-base font-black text-slate-950 bg-amber-400 hover:bg-amber-300 active:scale-95 transition-all shadow-lg shadow-amber-400/30 border border-amber-300 group"
               >
                 <span>Student Registration Form</span>
                 <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </a>
 
-              {/* Call Now Button */}
+              {/* Email Us Button (Instead of Phone Number) */}
               <a
-                href={businessInfo.phoneTel}
-                className="inline-flex items-center justify-center gap-2 px-5 py-4 rounded-2xl text-base font-bold text-blue-950 bg-white hover:bg-blue-50 border border-blue-200 shadow-xs active:scale-95 transition-all"
+                href={`mailto:${businessInfo.email}`}
+                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-2xl text-sm font-bold text-blue-950 bg-white hover:bg-blue-50 border border-blue-200 shadow-xs active:scale-95 transition-all"
+                title={`Write email to ${businessInfo.email}`}
               >
-                <Phone className="w-4 h-4 text-blue-700" />
-                <span>Call {businessInfo.phone}</span>
+                <Mail className="w-4 h-4 text-blue-700" />
+                <span>Write Email</span>
               </a>
 
               {/* Direct WhatsApp Button */}
@@ -129,19 +158,19 @@ export default function Hero({ onOpenFlyerModal }) {
                 href={businessInfo.whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-4 py-4 rounded-2xl text-base font-bold text-emerald-800 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 active:scale-95 transition-all"
+                className="inline-flex items-center justify-center gap-2 px-4 py-3.5 rounded-2xl text-sm font-bold text-emerald-800 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 active:scale-95 transition-all"
                 title="Message on WhatsApp"
               >
                 <MessageSquare className="w-4 h-4 text-emerald-600" />
-                <span className="hidden sm:inline">WhatsApp</span>
+                <span>WhatsApp</span>
               </a>
             </div>
 
             {/* Quick Guarantees */}
-            <div className="pt-4 border-t border-slate-200 grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-xs text-slate-700 font-semibold">
+            <div className="pt-3 border-t border-slate-200 grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-xs text-slate-700 font-semibold">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-blue-700 shrink-0" />
-                <span>Personalised Attention</span>
+                <span>Personalized Attention</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-blue-700 shrink-0" />
@@ -149,13 +178,13 @@ export default function Hero({ onOpenFlyerModal }) {
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-blue-700 shrink-0" />
-                <span>Steps from Metro Exit-D</span>
+                <span>Exit-D, New Market Metro</span>
               </div>
             </div>
 
           </div>
 
-          {/* Right Column: Visual Flyer Showcase (Bright Clean Card) */}
+          {/* Right Column: Visual Flyer Showcase */}
           <div className="lg:col-span-5 relative">
             <div className="relative mx-auto max-w-md lg:max-w-none">
               
@@ -228,7 +257,7 @@ export default function Hero({ onOpenFlyerModal }) {
                     Interactive Classroom
                   </div>
                   <div className="text-[11px] text-blue-700 font-semibold">
-                    Beside Gunj, Metro Exit-D
+                    Exit-D, New Market Metro
                   </div>
                 </div>
               </div>
