@@ -17,6 +17,7 @@ import {
 import {
   businessInfo,
   GOOGLE_MAPS_URL,
+  GOOGLE_MAPS_SHORT_URL,
   GOOGLE_MAPS_DIRECTIONS_URL,
   GOOGLE_MAPS_EMBED_URL,
   HUB_COORDINATES
@@ -111,12 +112,13 @@ export default function LocationSection() {
                   <p className="font-black text-blue-950 text-sm">
                     {businessInfo.address.metro}
                   </p>
-                  <p>{businessInfo.address.line1}</p>
-                  <p className="font-semibold text-slate-800">
+                  <p className="font-semibold text-slate-900">{businessInfo.address.line1}</p>
+                  <p>{businessInfo.address.line2}</p>
+                  <p className="text-slate-800">
                     {businessInfo.address.city}, {businessInfo.address.state} - {businessInfo.address.pincode}
                   </p>
-                  <p className="text-xs text-slate-500 pt-1 font-mono">
-                    GPS Coordinates: {HUB_COORDINATES.lat}° N, {HUB_COORDINATES.lng}° E
+                  <p className="text-xs text-blue-800 pt-1 font-mono font-bold">
+                    📍 Plus Code: {businessInfo.address.plusCode}
                   </p>
                 </div>
               </div>
@@ -392,7 +394,7 @@ export default function LocationSection() {
             <div className="p-4 bg-slate-50 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-600">
               <div className="text-left space-y-0.5">
                 <span className="font-bold text-slate-900 block">
-                  📍 Beside Gunj, Gate - 4, Saleem Nagar Colony, Malakpet
+                  📍 1st Floor, H. No: 16-11-1/5/6/1, Beside Gunj, Gate - 4, Saleem Nagar Colony
                 </span>
                 <span className="text-blue-700 font-semibold">
                   Exit-D, New Market Metro Station (Direct walk-up)
@@ -401,12 +403,12 @@ export default function LocationSection() {
 
               <div className="flex items-center gap-2">
                 <a
-                  href={GOOGLE_MAPS_URL}
+                  href={GOOGLE_MAPS_SHORT_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-3.5 py-2 rounded-xl text-xs font-bold text-slate-800 bg-white hover:bg-slate-100 border border-slate-300 transition-colors shadow-xs"
                 >
-                  <span>Open Exact Pin</span>
+                  <span>Google Maps App ↗</span>
                 </a>
 
                 <a

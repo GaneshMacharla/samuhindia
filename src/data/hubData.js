@@ -8,17 +8,18 @@ export const FACULTY_REGISTRATION_FORM_URL = "https://forms.gle/ECdK7qZhB1R6WVP2
 export const CLASSROOM_RENTAL_FORM_URL = "https://forms.gle/b3M4xQ1Vjqx4WypB7";
 export const GOOGLE_FORM_URL = STUDENT_REGISTRATION_FORM_URL;
 
-// Exact coordinates matching the user's verified location (at red arrow: beside Gate-4, Saleem Nagar Colony)
+// Official verified Google Maps listing: https://maps.app.goo.gl/3Cu2G2PG45SYRRqS7?g_st=awb
 export const HUB_COORDINATES = {
-  lat: 17.37315,
-  lng: 78.50748
+  lat: 17.3743568,
+  lng: 78.5078729
 };
 
-// Robust, exact Google Maps URLs that open directly in Google Maps app / web at the true location
-export const GOOGLE_MAPS_URL = `https://www.google.com/maps?q=${HUB_COORDINATES.lat},${HUB_COORDINATES.lng}`;
-export const GOOGLE_MAPS_DIRECTIONS_URL = `https://www.google.com/maps/dir/?api=1&destination=${HUB_COORDINATES.lat},${HUB_COORDINATES.lng}`;
-export const GOOGLE_MAPS_PLACE_URL = `https://www.google.com/maps/search/?api=1&query=${HUB_COORDINATES.lat},${HUB_COORDINATES.lng}`;
-export const GOOGLE_MAPS_EMBED_URL = `https://maps.google.com/maps?q=${HUB_COORDINATES.lat},${HUB_COORDINATES.lng}&hl=en&z=17&output=embed`;
+// Official direct Google Maps URLs
+export const GOOGLE_MAPS_SHORT_URL = "https://maps.app.goo.gl/3Cu2G2PG45SYRRqS7?g_st=awb";
+export const GOOGLE_MAPS_PLACE_URL = "https://www.google.com/maps/place/SAMUH+INDIA+Learning+%26+Training+Hub/@17.3743568,78.5078729,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcb9950ad0a2657:0x31f4ebf0df2801d!8m2!3d17.3743568!4d78.5078729!16s%2Fg%2F11zfjl3z3k";
+export const GOOGLE_MAPS_URL = GOOGLE_MAPS_SHORT_URL;
+export const GOOGLE_MAPS_DIRECTIONS_URL = "https://www.google.com/maps/dir/?api=1&destination=SAMUH+INDIA+Learning+%26+Training+Hub&destination_place_id=ChIJVyYKrVCZyzsRHQEo3_Dr9DE";
+export const GOOGLE_MAPS_EMBED_URL = "https://maps.google.com/maps?q=SAMUH+INDIA+Learning+%26+Training+Hub,+Hyderabad&hl=en&z=17&output=embed";
 
 export const businessInfo = {
   name: "Samuh India Learning & Training (SILT) Hub",
@@ -109,16 +110,19 @@ export const businessInfo = {
     ]
   },
 
-  // Address - Exit-D, New Market Metro Station, Beside Gunj Gate-4
+  // Official Verified Address from Google Maps listing
   address: {
+    floor: "1st Floor",
     metro: "Exit-D, New Market Metro Station",
-    line1: "Beside Gunj, Gate - 4, Saleem Nagar Colony",
-    line2: "Beside Gunj, Gate - 4, Saleem Nagar Colony",
+    houseNo: "H. No: 16-11-1/5/6/1",
+    line1: "1st Floor, H. No: 16-11-1/5/6/1, Beside Gunj, Gate - 4",
+    line2: "Saleem Nagar Colony, Malakpet Extension",
     line3: "Malakpet",
     city: "Hyderabad",
     state: "Telangana",
     pincode: "500036",
-    full: "Exit-D, New Market Metro Station, Beside Gunj, Gate - 4, Saleem Nagar Colony, Malakpet, Hyderabad, Telangana 500036",
+    plusCode: "9GF5+P4 Hyderabad, Telangana",
+    full: "1st Floor, New Market Metro Station Exit-D, H. No: 16-11-1/5/6/1, Beside Gunj, Gate - 4, Saleem Nagar Colony, Malakpet Extension, Malakpet, Hyderabad, Telangana 500036",
     landmark: "Beside Gunj, Gate - 4, Saleem Nagar Colony, Exit-D of New Market Metro Station"
   },
 
