@@ -84,7 +84,7 @@ export default function ClassroomRentalSection({ onOpenFlyerModal }) {
           </h2>
 
           <p className="mt-4 text-base sm:text-lg text-blue-100 max-w-2xl mx-auto leading-relaxed">
-            Classroom sizes engineered for better concentration and faculty - students interaction. All together, 120 to 150 students can accommodate in a single slot at SILT Hub, a 10-minute walk (~500 m) from Exit-D, New Market Metro station.
+            Classroom sizes engineered for better concentration and faculty - students interaction. All together, 120 to 150 students can accommodate in a single slot at SILT Hub, Exit-D, New Market Metro station.
           </p>
         </div>
 
@@ -144,7 +144,7 @@ export default function ClassroomRentalSection({ onOpenFlyerModal }) {
               <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between gap-2 p-3 rounded-2xl bg-white/95 backdrop-blur-md text-slate-900 shadow-md">
                 <div className="text-left">
                   <span className="text-[10px] font-black uppercase tracking-wider text-blue-800 block">
-                    10-Min Walk From Metro Exit-D
+                    Exit-D, New Market Metro
                   </span>
                   <p className="text-xs sm:text-sm font-black text-slate-900">
                     Classrooms (10-30 Students)
@@ -266,7 +266,7 @@ export default function ClassroomRentalSection({ onOpenFlyerModal }) {
                 <Wifi className="w-4 h-4 text-amber-300" /> High-Speed Wi-Fi
               </span>
               <span className="flex items-center gap-1.5">
-                <MapPin className="w-4 h-4 text-amber-300" /> 10-Min Walk from Metro Exit-D
+                <MapPin className="w-4 h-4 text-amber-300" /> Exit-D, New Market Metro
               </span>
             </div>
 

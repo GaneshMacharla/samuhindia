@@ -49,7 +49,7 @@ export default function TrustStrip() {
                 Metro Connected
               </span>
               <p className="text-[11px] text-slate-600 font-medium">
-                10-Min Walk (~500 m) from Metro Exit-D
+                Exit-D, New Market Station
               </p>
             </div>
           </div>

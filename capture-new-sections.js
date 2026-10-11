@@ -1,7 +1,7 @@
 import puppeteer from 'puppeteer-core';
 
 const EDGE_PATH = 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe';
-const URL = 'http://localhost:5173/';
+const URL = process.env.TEST_URL || 'http://localhost:5174/';
 
 async function capture() {
   const browser = await puppeteer.launch({
@@ -24,7 +24,11 @@ async function capture() {
   if (s3) await s3.screenshot({ path: 'public/images/test-segment3.png' });
 
   const s4 = await page.$('#contact');
-  if (s4) await s4.screenshot({ path: 'public/images/test-contact.png' });
+  if (s4) {
+    await page.evaluate(() => document.querySelector('#contact').scrollIntoView());
+    await new Promise(r => setTimeout(r, 4500));
+    await s4.screenshot({ path: 'public/images/test-contact.png' });
+  }
 
   await browser.close();
   console.log('✓ All segment screenshots saved');

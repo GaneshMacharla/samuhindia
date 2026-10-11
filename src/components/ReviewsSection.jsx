@@ -105,7 +105,7 @@ export default function ReviewsSection() {
                 </div>
               </div>
               <p className="text-sm text-slate-600 leading-relaxed">
-                "Convenient location just a 10-minute walk from New Market Metro Station Exit-D. Very peaceful, dedicated study atmosphere with supportive teachers and clear step-by-step explanations."
+                "Convenient location right at Exit-D, New Market Metro station. Very peaceful, dedicated study atmosphere with supportive teachers and clear step-by-step explanations."
               </p>
             </div>
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, MessageSquare, ExternalLink, Star, MapPin, CheckCircle2, Sparkles, GraduationCap, Users, Building2, Eye, Gift } from 'lucide-react';
+import { Mail, MessageSquare, ExternalLink, Star, MapPin, CheckCircle2, Sparkles, GraduationCap, Users, Building2, Eye, Gift, Train } from 'lucide-react';
 import { businessInfo, STUDENT_REGISTRATION_FORM_URL } from '../data/hubData';
 
 export default function Hero({ onOpenFlyerModal }) {
@@ -25,13 +25,16 @@ export default function Hero({ onOpenFlyerModal }) {
           {/* Left Column: Headline, Copy & CTAs */}
           <div className="lg:col-span-7 space-y-6 text-left">
             
-            {/* Badges Row - Explicitly showing Exit-D, New Market Metro station */}
-            <div className="inline-flex flex-wrap items-center gap-2.5">
+            {/* Location & Trust Badges */}
+            <div className="flex flex-wrap items-center gap-2.5">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-100/90 border border-blue-200 text-blue-950 text-xs sm:text-sm font-bold shadow-xs">
                 <span className="flex h-2 w-2 rounded-full bg-blue-600 animate-pulse" />
                 <span>Malakpet, Hyderabad</span>
-                <span className="text-blue-300">•</span>
-                <strong className="text-blue-900 font-extrabold">10-Min Walk from Metro Exit-D (~500 m)</strong>
+              </div>
+
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-300 text-blue-950 text-xs sm:text-sm font-black shadow-xs">
+                <Train className="w-3.5 h-3.5 text-blue-700 shrink-0" />
+                <span>New Market Metro station Exit-D</span>
               </div>
 
               <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-amber-50 border border-amber-300 text-amber-900 text-xs sm:text-sm font-bold">
@@ -178,7 +181,7 @@ export default function Hero({ onOpenFlyerModal }) {
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-blue-700 shrink-0" />
-                <span>10-Min Walk from Metro Exit-D</span>
+                <span>Exit-D, New Market Metro</span>
               </div>
             </div>
 

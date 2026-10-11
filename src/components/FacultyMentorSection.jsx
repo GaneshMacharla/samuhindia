@@ -37,7 +37,7 @@ export default function FacultyMentorSection() {
     },
     {
       title: "Disciplined Academic Environment",
-      desc: "Peaceful learning atmosphere a 10-min walk (~500 m) from New Market Metro Exit-D, with complete administrative support."
+      desc: "Peaceful learning atmosphere at Exit-D, New Market Metro station, with complete administrative support."
     }
   ];
 

@@ -7,7 +7,7 @@ export default function TopNoticeTicker() {
     { text: "Admissions Open for 2026-27 Batches — Higher School (9th-10th), Intermediate (CBSE / ICSE / State Board) & Higher Studies", highlight: true },
     { text: "Career Skilling: Select Free Skill Training & Placement Modules + Advanced IT Tracks", highlight: false },
     { text: "Classrooms on Rent Available for Faculty & Institutes (10 to 30 Student Batch Size • AC & Wi-Fi)", highlight: false },
-    { text: "Location: Beside Gunj, Gate – 4, Saleem Nagar Colony, Malakpet (~500 m / 10-min walk from Exit-D Metro)", highlight: false },
+    { text: "Location: Beside Gunj, Gate – 4, Saleem Nagar Colony, Malakpet (Exit-D, New Market Metro station)", highlight: false },
     { text: "Submit your details online: Google Registration Form is now active", highlight: true },
   ];
 
