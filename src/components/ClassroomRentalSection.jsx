@@ -13,7 +13,8 @@ import {
   ShieldCheck,
   DoorOpen,
   Wifi,
-  Wind
+  Wind,
+  Eye
 } from 'lucide-react';
 import { businessInfo, CLASSROOM_RENTAL_FORM_URL } from '../data/hubData';
 
@@ -88,6 +89,27 @@ export default function ClassroomRentalSection({ onOpenFlyerModal }) {
           </p>
         </div>
 
+        {/* Featured Official Campus Facilities Banner */}
+        <div className="mb-14 max-w-5xl mx-auto">
+          <div
+            onClick={() => onOpenFlyerModal && onOpenFlyerModal('banner')}
+            className="group relative rounded-3xl overflow-hidden border-2 border-amber-400/60 shadow-2xl bg-slate-950 cursor-pointer hover:border-amber-400 transition-all"
+          >
+            <img
+              src="/images/silt-learning-hub-banner.jpg"
+              alt="SAMUH INDIA Learning & Training Hub - Classroom Rental, Study Centre, Coworking Space, For Trainers Partner With Us"
+              className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.01]"
+            />
+            <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 flex items-center gap-2 bg-slate-950/85 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-white/20 text-xs font-bold text-amber-300 shadow-md">
+              <Eye className="w-3.5 h-3.5 text-amber-400" />
+              <span>Click to Expand Banner</span>
+            </div>
+          </div>
+          <p className="mt-3 text-xs text-blue-200/90 text-center font-semibold">
+            🌱 An Initiative of <strong className="text-amber-300">TALEEM-E-ROZGAR EDUCATIONAL &amp; CHARITABLE TRUST</strong> • Near New Market Metro Station, Exit-D
+          </p>
+        </div>
+
         {/* 6 CORE FACILITY CARDS (ALL USER REQUESTED AMENITIES) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 text-left">
           {facilityCards.map((fac, idx) => {
@@ -131,13 +153,13 @@ export default function ClassroomRentalSection({ onOpenFlyerModal }) {
           {/* Left Column: Visual Flyer & Facility Photos */}
           <div className="lg:col-span-5 space-y-4">
             <div
-              onClick={() => onOpenFlyerModal && onOpenFlyerModal('classroom')}
+              onClick={() => onOpenFlyerModal && onOpenFlyerModal('hub')}
               className="relative rounded-3xl overflow-hidden border-4 border-amber-400/60 shadow-2xl bg-blue-900 group cursor-pointer"
             >
               <img
-                src="/images/silt-classrooms-flyer.jpg"
-                alt="Looking for Class Rooms? Your Search Ends Here - SILT Education Hub Malakpet Hyderabad"
-                className="w-full h-[380px] sm:h-[440px] object-contain bg-blue-950 p-2 transition-transform duration-500 group-hover:scale-105"
+                src="/images/silt-learning-hub-flyer.jpg"
+                alt="SAMUH INDIA Learning & Training Hub - Classroom Rental, Study Centre, Coworking Space, For Trainers"
+                className="w-full h-[380px] sm:h-[440px] object-cover object-top transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none" />
 
@@ -147,7 +169,7 @@ export default function ClassroomRentalSection({ onOpenFlyerModal }) {
                     Exit-D, New Market Metro
                   </span>
                   <p className="text-xs sm:text-sm font-black text-slate-900">
-                    Classrooms (10-30 Students)
+                    Official Hub Announcement Flyer
                   </p>
                 </div>
                 {onOpenFlyerModal && (
@@ -155,7 +177,7 @@ export default function ClassroomRentalSection({ onOpenFlyerModal }) {
                     type="button"
                     onClick={(e) => {
                       e.stopPropagation();
-                      onOpenFlyerModal('classroom');
+                      onOpenFlyerModal('hub');
                     }}
                     className="px-3 py-1.5 rounded-xl text-xs font-black bg-amber-400 hover:bg-amber-300 text-slate-950 transition-all shadow-xs cursor-pointer"
                   >

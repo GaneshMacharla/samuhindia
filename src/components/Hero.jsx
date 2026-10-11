@@ -191,14 +191,14 @@ export default function Hero({ onOpenFlyerModal }) {
           <div className="lg:col-span-5 relative">
             <div className="relative mx-auto max-w-md lg:max-w-none">
               
-              {/* Flyer Showcase Card */}
+              {/* Flyer Showcase Card - Featuring New Official Launch Flyer */}
               <div
-                onClick={onOpenFlyerModal}
+                onClick={() => onOpenFlyerModal && onOpenFlyerModal('hub')}
                 className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 group cursor-pointer ring-1 ring-blue-100"
               >
                 <img
-                  src="/images/silt-hub-flyer.jpg"
-                  alt="Official Samuh India Learning & Training (SILT) Hub Announcement Flyer"
+                  src="/images/silt-learning-hub-flyer.jpg"
+                  alt="Official SAMUH INDIA Learning & Training Hub Announcement Flyer - Classroom Rental, Study Centre, Coworking Space, For Trainers"
                   className="w-full h-[400px] sm:h-[460px] object-cover object-top transition-transform duration-500 group-hover:scale-105"
                   loading="eager"
                 />
@@ -209,10 +209,10 @@ export default function Hero({ onOpenFlyerModal }) {
                 <div className="absolute bottom-4 inset-x-4 flex items-center justify-between gap-2 p-3 rounded-2xl bg-white/95 backdrop-blur-md border border-slate-200 shadow-md">
                   <div className="text-left">
                     <span className="text-[10px] font-black uppercase tracking-wider text-blue-800 block">
-                      Official Launch Flyer
+                      Official Launch Announcement
                     </span>
-                    <h3 className="text-sm font-black text-slate-900">
-                      SILT Hub Hyderabad
+                    <h3 className="text-xs sm:text-sm font-black text-slate-900">
+                      SAMUH INDIA Hub • Malakpet
                     </h3>
                   </div>
 
@@ -220,9 +220,9 @@ export default function Hero({ onOpenFlyerModal }) {
                     type="button"
                     onClick={(e) => {
                       e.stopPropagation();
-                      onOpenFlyerModal();
+                      onOpenFlyerModal && onOpenFlyerModal('hub');
                     }}
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-black bg-amber-400 hover:bg-amber-300 text-slate-950 shadow-sm transition-all shrink-0"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-black bg-amber-400 hover:bg-amber-300 text-slate-950 shadow-sm transition-all shrink-0 cursor-pointer"
                   >
                     <Eye className="w-3.5 h-3.5" />
                     <span>View Full</span>

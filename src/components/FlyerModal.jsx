@@ -13,26 +13,46 @@ export default function FlyerModal({ isOpen, onClose, initialTab = 'student' }) 
 
   if (!isOpen) return null;
 
-  const currentFlyer =
-    activeTab === 'student'
-      ? {
-          src: '/images/silt-student-flyer.jpg',
-          alt: 'Official SILT Hub Student Announcement Flyer - Learn Better, Score Higher',
-          downloadName: 'SILT-Student-Coaching-Flyer.jpg',
-          title: 'Official Student Announcement Flyer',
-          desc: 'Admissions, academic coaching, key subjects & exam preparation',
-          formUrl: STUDENT_REGISTRATION_FORM_URL,
-          formBtnText: 'Student Registration Form'
-        }
-      : {
-          src: '/images/silt-classrooms-flyer.jpg',
-          alt: 'SILT Education Hub Classroom Spaces Available Flyer - Malakpet Hyderabad',
-          downloadName: 'SILT-Classrooms-Space-Flyer.jpg',
-          title: 'Classroom on Rent Announcement Flyer',
-          desc: 'Modern classrooms (10-30 students) for teachers, tutors & institutions',
-          formUrl: CLASSROOM_RENTAL_FORM_URL,
-          formBtnText: 'Classrooms Registration Form'
-        };
+  const flyersMap = {
+    hub: {
+      src: '/images/silt-learning-hub-flyer.jpg',
+      alt: 'Official SAMUH INDIA Learning & Training Hub Launch Flyer - Malakpet Hyderabad',
+      downloadName: 'SAMUH-INDIA-Learning-Hub-Flyer.jpg',
+      title: 'Official SAMUH INDIA Hub Announcement Flyer',
+      desc: 'Classroom Rental • Study Centre • Coworking Space • For Trainers Partner With Us',
+      formUrl: CLASSROOM_RENTAL_FORM_URL,
+      formBtnText: 'Classroom Rental Form'
+    },
+    banner: {
+      src: '/images/silt-learning-hub-banner.jpg',
+      alt: 'SAMUH INDIA Hub Facilities & Offerings Banner - Malakpet Hyderabad',
+      downloadName: 'SAMUH-INDIA-Facilities-Banner.jpg',
+      title: 'SAMUH INDIA Campus Facilities & Offerings Banner',
+      desc: 'Hourly, Daily & Monthly Classrooms, Dedicated Study Seats & Coworking',
+      formUrl: CLASSROOM_RENTAL_FORM_URL,
+      formBtnText: 'Classroom Rental Form'
+    },
+    student: {
+      src: '/images/silt-student-flyer.jpg',
+      alt: 'Official SILT Hub Student Announcement Flyer - Learn Better, Score Higher',
+      downloadName: 'SILT-Student-Coaching-Flyer.jpg',
+      title: 'Official Student Announcement Flyer',
+      desc: 'Admissions, academic coaching, key subjects & exam preparation',
+      formUrl: STUDENT_REGISTRATION_FORM_URL,
+      formBtnText: 'Student Registration Form'
+    },
+    classroom: {
+      src: '/images/silt-classrooms-flyer.jpg',
+      alt: 'SILT Education Hub Classroom Spaces Available Flyer - Malakpet Hyderabad',
+      downloadName: 'SILT-Classrooms-Space-Flyer.jpg',
+      title: 'Classroom on Rent Announcement Flyer',
+      desc: 'Modern classrooms (10-30 students) for teachers, tutors & institutions',
+      formUrl: CLASSROOM_RENTAL_FORM_URL,
+      formBtnText: 'Classrooms Registration Form'
+    }
+  };
+
+  const currentFlyer = flyersMap[activeTab] || flyersMap.hub;
 
   return (
     <div
@@ -66,13 +86,37 @@ export default function FlyerModal({ isOpen, onClose, initialTab = 'student' }) 
         </div>
 
         {/* Tab Switcher */}
-        <div className="px-5 py-2.5 bg-slate-100/90 border-b border-slate-200 flex items-center gap-2">
+        <div className="px-4 py-2 bg-slate-100/90 border-b border-slate-200 flex flex-wrap items-center gap-1.5">
+          <button
+            type="button"
+            onClick={() => setActiveTab('hub')}
+            className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-xl text-xs font-bold transition-all ${
+              activeTab === 'hub'
+                ? 'bg-amber-400 text-slate-950 shadow-sm border border-amber-300 font-black'
+                : 'bg-white text-slate-600 hover:bg-slate-200 border border-slate-200'
+            }`}
+          >
+            <span>Official Hub Flyer</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setActiveTab('banner')}
+            className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-xl text-xs font-bold transition-all ${
+              activeTab === 'banner'
+                ? 'bg-amber-400 text-slate-950 shadow-sm border border-amber-300 font-black'
+                : 'bg-white text-slate-600 hover:bg-slate-200 border border-slate-200'
+            }`}
+          >
+            <span>Facilities Banner</span>
+          </button>
+
           <button
             type="button"
             onClick={() => setActiveTab('student')}
-            className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all ${
+            className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-xl text-xs font-bold transition-all ${
               activeTab === 'student'
-                ? 'bg-amber-400 text-slate-950 shadow-sm border border-amber-300'
+                ? 'bg-blue-900 text-white shadow-sm border border-blue-800 font-black'
                 : 'bg-white text-slate-600 hover:bg-slate-200 border border-slate-200'
             }`}
           >
@@ -83,14 +127,14 @@ export default function FlyerModal({ isOpen, onClose, initialTab = 'student' }) 
           <button
             type="button"
             onClick={() => setActiveTab('classroom')}
-            className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all ${
+            className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-xl text-xs font-bold transition-all ${
               activeTab === 'classroom'
-                ? 'bg-blue-900 text-white shadow-sm border border-blue-800'
+                ? 'bg-blue-900 text-white shadow-sm border border-blue-800 font-black'
                 : 'bg-white text-slate-600 hover:bg-slate-200 border border-slate-200'
             }`}
           >
             <Building2 className="w-3.5 h-3.5" />
-            <span>Classroom on Rent Flyer</span>
+            <span>Classroom Spaces</span>
           </button>
         </div>
 

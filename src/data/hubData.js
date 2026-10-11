@@ -26,6 +26,8 @@ export const businessInfo = {
   shortName: "SILT Hub",
   brandName: "SAMUH INDIA",
   acronym: "SILT",
+  teluguName: "సమూహ ఇండియా లెర్నింగ్ & ట్రైనింగ్ హబ్",
+  trustName: "TALEEM-E-ROZGAR EDUCATIONAL & CHARITABLE TRUST",
   tagline: "Learn | Train | Grow | Build Your Future",
   motto: "Better Teachers, Brighter Futures!",
   heroPunchline: "Learn Better, Score Higher!",
@@ -402,6 +404,22 @@ export const studentNeedsList = [
  * Center Photos & Flyer Assets
  */
 export const centerPhotos = [
+  {
+    src: "/images/silt-learning-hub-flyer.jpg",
+    alt: "Official Samuh India Learning & Training Hub Announcement Flyer",
+    caption: "Official SAMUH INDIA Learning & Training Hub Flyer",
+    tag: "Official Flyer",
+    isFlyer: true,
+    flyerType: "hub"
+  },
+  {
+    src: "/images/silt-learning-hub-banner.jpg",
+    alt: "SAMUH INDIA Hub Facilities - Classroom Rental, Study Centre, Coworking Space, For Trainers",
+    caption: "Campus Facilities & Offerings Banner",
+    tag: "Hub Banner",
+    isFlyer: true,
+    flyerType: "banner"
+  },
   {
     src: "/images/silt-student-flyer.jpg",
     alt: "Official Samuh India Learning & Training (SILT) Hub Student Announcement Flyer",

@@ -211,6 +211,9 @@ export default function Footer({ onOpenFlyerModal }) {
             <p>
               &copy; {currentYear} {businessInfo.name}. All rights reserved.
             </p>
+            <p className="text-[11px] text-blue-300">
+              An Initiative of <strong className="text-amber-300">TALEEM-E-ROZGAR EDUCATIONAL &amp; CHARITABLE TRUST</strong>
+            </p>
             <p className="text-[11px] text-blue-400">
               Exit-D, New Market Metro station, Beside Gunj, Saleem Nagar, Malakpet, Hyderabad.
             </p>
