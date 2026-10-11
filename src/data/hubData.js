@@ -18,7 +18,7 @@ export const HUB_COORDINATES = {
 export const GOOGLE_MAPS_SHORT_URL = "https://maps.app.goo.gl/3Cu2G2PG45SYRRqS7?g_st=awb";
 export const GOOGLE_MAPS_PLACE_URL = "https://www.google.com/maps/place/SAMUH+INDIA+Learning+%26+Training+Hub/@17.3743568,78.5078729,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcb9950ad0a2657:0x31f4ebf0df2801d!8m2!3d17.3743568!4d78.5078729!16s%2Fg%2F11zfjl3z3k";
 export const GOOGLE_MAPS_URL = GOOGLE_MAPS_SHORT_URL;
-export const GOOGLE_MAPS_DIRECTIONS_URL = "https://www.google.com/maps/dir/?api=1&destination=SAMUH+INDIA+Learning+%26+Training+Hub&destination_place_id=ChIJVyYKrVCZyzsRHQEo3_Dr9DE";
+export const GOOGLE_MAPS_DIRECTIONS_URL = "https://www.google.com/maps/dir/?api=1&destination=17.3743568,78.5078729&destination_place_id=ChIJVyYKrVCZyzsRHQEo3_Dr9DE";
 export const GOOGLE_MAPS_EMBED_URL = "https://maps.google.com/maps?q=SAMUH+INDIA+Learning+%26+Training+Hub,+Hyderabad&hl=en&z=17&output=embed";
 
 export const businessInfo = {
