@@ -14,21 +14,30 @@ export default function FlyerModal({ isOpen, onClose, initialTab = 'student' }) 
   if (!isOpen) return null;
 
   const flyersMap = {
+    counselling: {
+      src: '/images/silt-comprehensive-counselling-banner.jpg',
+      alt: 'SAMUH INDIA Learning & Training Hub - Tuition Classes (9th to PG), Career Counselling, Study Centre, Incubation Cell',
+      downloadName: 'SAMUH-INDIA-Tuition-Career-Counselling-Banner.jpg',
+      title: 'Tuition Classes & Career Counselling Banner',
+      desc: '9th to PG Tuition Classes • Career Counselling • Classroom Rental • Incubation Cell',
+      formUrl: STUDENT_REGISTRATION_FORM_URL,
+      formBtnText: 'Student Registration Form'
+    },
+    coworking: {
+      src: '/images/silt-comprehensive-coworking-banner.jpg',
+      alt: 'SAMUH INDIA Learning & Training Hub - Classrooms, Coworking Space, Study Centre, Incubation Cell',
+      downloadName: 'SAMUH-INDIA-Classroom-Coworking-Banner.jpg',
+      title: 'Classrooms, Coworking Space & Incubation Banner',
+      desc: 'Classroom Rental • Coworking Space • Study Centre • Incubation Cell • Full Amenities',
+      formUrl: CLASSROOM_RENTAL_FORM_URL,
+      formBtnText: 'Classroom Rental Form'
+    },
     hub: {
       src: '/images/silt-learning-hub-flyer.jpg',
       alt: 'Official SAMUH INDIA Learning & Training Hub Launch Flyer - Malakpet Hyderabad',
       downloadName: 'SAMUH-INDIA-Learning-Hub-Flyer.jpg',
       title: 'Official SAMUH INDIA Hub Announcement Flyer',
       desc: 'Classroom Rental • Study Centre • Coworking Space • For Trainers Partner With Us',
-      formUrl: CLASSROOM_RENTAL_FORM_URL,
-      formBtnText: 'Classroom Rental Form'
-    },
-    banner: {
-      src: '/images/silt-learning-hub-banner.jpg',
-      alt: 'SAMUH INDIA Hub Facilities & Offerings Banner - Malakpet Hyderabad',
-      downloadName: 'SAMUH-INDIA-Facilities-Banner.jpg',
-      title: 'SAMUH INDIA Campus Facilities & Offerings Banner',
-      desc: 'Hourly, Daily & Monthly Classrooms, Dedicated Study Seats & Coworking',
       formUrl: CLASSROOM_RENTAL_FORM_URL,
       formBtnText: 'Classroom Rental Form'
     },
@@ -52,7 +61,7 @@ export default function FlyerModal({ isOpen, onClose, initialTab = 'student' }) 
     }
   };
 
-  const currentFlyer = flyersMap[activeTab] || flyersMap.hub;
+  const currentFlyer = flyersMap[activeTab] || flyersMap.counselling;
 
   return (
     <div
@@ -89,26 +98,26 @@ export default function FlyerModal({ isOpen, onClose, initialTab = 'student' }) 
         <div className="px-4 py-2 bg-slate-100/90 border-b border-slate-200 flex flex-wrap items-center gap-1.5">
           <button
             type="button"
-            onClick={() => setActiveTab('hub')}
+            onClick={() => setActiveTab('counselling')}
             className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-xl text-xs font-bold transition-all ${
-              activeTab === 'hub'
+              activeTab === 'counselling'
                 ? 'bg-amber-400 text-slate-950 shadow-sm border border-amber-300 font-black'
                 : 'bg-white text-slate-600 hover:bg-slate-200 border border-slate-200'
             }`}
           >
-            <span>Official Hub Flyer</span>
+            <span>Tuition &amp; Career</span>
           </button>
 
           <button
             type="button"
-            onClick={() => setActiveTab('banner')}
+            onClick={() => setActiveTab('coworking')}
             className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-xl text-xs font-bold transition-all ${
-              activeTab === 'banner'
+              activeTab === 'coworking'
                 ? 'bg-amber-400 text-slate-950 shadow-sm border border-amber-300 font-black'
                 : 'bg-white text-slate-600 hover:bg-slate-200 border border-slate-200'
             }`}
           >
-            <span>Facilities Banner</span>
+            <span>Classrooms &amp; Coworking</span>
           </button>
 
           <button
@@ -134,7 +143,7 @@ export default function FlyerModal({ isOpen, onClose, initialTab = 'student' }) 
             }`}
           >
             <Building2 className="w-3.5 h-3.5" />
-            <span>Classroom Spaces</span>
+            <span>Classroom Space</span>
           </button>
         </div>
 

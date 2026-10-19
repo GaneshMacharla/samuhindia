@@ -40,13 +40,13 @@ export default function App() {
       {/* Main Content Organized into 3 Core Segments */}
       <main className="flex-1">
         {/* 2. Hero Section featuring Exit-D New Market Metro & 3 Segments Navigator */}
-        <Hero onOpenFlyerModal={() => handleOpenFlyerModal('student')} />
+        <Hero onOpenFlyerModal={(tab = 'counselling') => handleOpenFlyerModal(tab)} />
 
         {/* 3. Verified Trust Strip */}
         <TrustStrip />
 
         {/* 4. SEGMENT I: Students Needs, Offerings & Registrations */}
-        <StudentSegment />
+        <StudentSegment onOpenFlyerModal={(tab = 'counselling') => handleOpenFlyerModal(tab)} />
 
         {/* 5. SEGMENT II: Faculty Requirements, Expectations & Registration */}
         <FacultyMentorSection />

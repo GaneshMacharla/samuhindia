@@ -11,11 +11,12 @@ import {
   Lightbulb,
   TrendingUp,
   Award,
-  ArrowRight
+  ArrowRight,
+  Eye
 } from 'lucide-react';
 import { programs, studentNeedsList, STUDENT_REGISTRATION_FORM_URL } from '../data/hubData';
 
-export default function StudentSegment() {
+export default function StudentSegment({ onOpenFlyerModal }) {
   const [activeCategory, setActiveCategory] = useState('All Courses');
 
   const categories = [
@@ -65,6 +66,42 @@ export default function StudentSegment() {
           <p className="mt-2 text-base sm:text-lg text-slate-600 leading-relaxed">
             Empowering every learner with conceptual clarity, board exam excellence, competitive entrance ranks, and job-ready skills under expert faculty.
           </p>
+        </div>
+
+        {/* Featured Official Tuition & Career Counselling Ecosystem Banner */}
+        <div className="mb-16 max-w-5xl mx-auto">
+          <div
+            onClick={() => onOpenFlyerModal && onOpenFlyerModal('counselling')}
+            className="group relative rounded-3xl overflow-hidden border-2 border-blue-200/90 shadow-xl bg-slate-950 cursor-pointer hover:border-blue-500 transition-all ring-1 ring-blue-100"
+          >
+            <img
+              src="/images/silt-comprehensive-counselling-banner.jpg"
+              alt="SAMUH INDIA Learning & Training Hub - Tuition Classes (9th to PG), Career Counselling, Study Centre, Incubation Cell"
+              className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-[1.01]"
+              loading="lazy"
+            />
+            <div className="p-3 sm:p-4 bg-white border-t border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-left">
+              <div>
+                <span className="text-[10px] font-black uppercase tracking-wider text-blue-800 block">
+                  Official Academic Infographic
+                </span>
+                <p className="text-xs sm:text-sm font-black text-slate-900">
+                  Tuition Classes (9th to PG), Career Counselling, Study Centre &amp; Incubation Cell
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onOpenFlyerModal && onOpenFlyerModal('counselling');
+                }}
+                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-black bg-amber-400 hover:bg-amber-300 text-slate-950 shadow-sm transition-all shrink-0 cursor-pointer"
+              >
+                <Eye className="w-3.5 h-3.5" />
+                <span>Enlarge Banner</span>
+              </button>
+            </div>
+          </div>
         </div>
 
         {/* PART 1: STUDENT NEEDS & CHALLENGES */}

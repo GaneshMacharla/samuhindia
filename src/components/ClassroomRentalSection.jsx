@@ -89,20 +89,37 @@ export default function ClassroomRentalSection({ onOpenFlyerModal }) {
           </p>
         </div>
 
-        {/* Featured Official Campus Facilities Banner */}
+        {/* Featured Official Campus Facilities & Coworking Banner */}
         <div className="mb-14 max-w-5xl mx-auto">
           <div
-            onClick={() => onOpenFlyerModal && onOpenFlyerModal('banner')}
+            onClick={() => onOpenFlyerModal && onOpenFlyerModal('coworking')}
             className="group relative rounded-3xl overflow-hidden border-2 border-amber-400/60 shadow-2xl bg-slate-950 cursor-pointer hover:border-amber-400 transition-all"
           >
             <img
-              src="/images/silt-learning-hub-banner.jpg"
-              alt="SAMUH INDIA Learning & Training Hub - Classroom Rental, Study Centre, Coworking Space, For Trainers Partner With Us"
-              className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.01]"
+              src="/images/silt-comprehensive-coworking-banner.jpg"
+              alt="SAMUH INDIA Learning & Training Hub - Classroom Rental, Coworking Space, Study Centre, Incubation Cell, Tuition Classes"
+              className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-[1.01]"
             />
-            <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 flex items-center gap-2 bg-slate-950/85 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-white/20 text-xs font-bold text-amber-300 shadow-md">
-              <Eye className="w-3.5 h-3.5 text-amber-400" />
-              <span>Click to Expand Banner</span>
+            <div className="p-3 sm:p-4 bg-slate-950/90 border-t border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-left">
+              <div>
+                <span className="text-[10px] font-black uppercase tracking-wider text-amber-300 block">
+                  Official Campus Infrastructure Infographic
+                </span>
+                <p className="text-xs sm:text-sm font-bold text-white">
+                  Classrooms, Coworking Space, Study Centre, Incubation Cell &amp; Amenities
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onOpenFlyerModal && onOpenFlyerModal('coworking');
+                }}
+                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-black bg-amber-400 hover:bg-amber-300 text-slate-950 shadow-sm transition-all shrink-0 cursor-pointer"
+              >
+                <Eye className="w-3.5 h-3.5" />
+                <span>Enlarge Banner</span>
+              </button>
             </div>
           </div>
           <p className="mt-3 text-xs text-blue-200/90 text-center font-semibold">

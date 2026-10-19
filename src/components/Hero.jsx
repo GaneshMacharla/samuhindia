@@ -1,8 +1,28 @@
-import React from 'react';
-import { Mail, MessageSquare, ExternalLink, Star, MapPin, CheckCircle2, Sparkles, GraduationCap, Users, Building2, Eye, Gift, Train } from 'lucide-react';
+import React, { useState } from 'react';
+import { Mail, MessageSquare, ExternalLink, Star, MapPin, CheckCircle2, Sparkles, GraduationCap, Users, Building2, Eye, Gift, Train, Layers } from 'lucide-react';
 import { businessInfo, STUDENT_REGISTRATION_FORM_URL } from '../data/hubData';
 
 export default function Hero({ onOpenFlyerModal }) {
+  const [activeHeroBanner, setActiveHeroBanner] = useState(0);
+
+  const heroBanners = [
+    {
+      id: 'counselling',
+      src: '/images/silt-comprehensive-counselling-banner.jpg',
+      tag: 'Tuition & Careers',
+      label: 'Tuition & Counselling',
+      title: 'Tuition Classes & Career Counselling Banner',
+      alt: 'SAMUH INDIA Hub - Tuition Classes (9th to PG), Career Counselling, Study Centre, Incubation Cell'
+    },
+    {
+      id: 'coworking',
+      src: '/images/silt-comprehensive-coworking-banner.jpg',
+      tag: 'Campus & Coworking',
+      label: 'Classrooms & Coworking',
+      title: 'Classrooms, Coworking & Incubation Banner',
+      alt: 'SAMUH INDIA Hub - Classrooms, Coworking Space, Study Centre, Incubation Cell'
+    }
+  ];
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-blue-50/70 via-white to-slate-50/80 pt-8 pb-16 lg:pt-12 lg:pb-20 border-b border-blue-100">
       
@@ -245,32 +265,50 @@ export default function Hero({ onOpenFlyerModal }) {
 
           </div>
 
-          {/* Right Column: Visual Flyer Showcase */}
+          {/* Right Column: Visual Infographic Banner Showcase */}
           <div className="lg:col-span-5 relative">
-            <div className="relative mx-auto max-w-md lg:max-w-none">
+            <div className="relative mx-auto max-w-md lg:max-w-none space-y-3">
               
-              {/* Flyer Showcase Card - Featuring New Official Launch Flyer */}
+              {/* Top Banner Switcher Tabs */}
+              <div className="flex items-center justify-between gap-1.5 p-1.5 rounded-2xl bg-white border border-blue-200/90 shadow-md">
+                {heroBanners.map((b, idx) => (
+                  <button
+                    key={b.id}
+                    type="button"
+                    onClick={() => setActiveHeroBanner(idx)}
+                    className={`flex-1 py-1.5 px-2 rounded-xl text-xs font-black transition-all text-center ${
+                      activeHeroBanner === idx
+                        ? 'bg-blue-900 text-amber-300 shadow-sm border border-blue-800'
+                        : 'text-slate-700 hover:bg-slate-100 hover:text-blue-950'
+                    }`}
+                  >
+                    <span>{b.label}</span>
+                  </button>
+                ))}
+              </div>
+
+              {/* Banner Showcase Card - Featuring User's New Infographic Banners */}
               <div
-                onClick={() => onOpenFlyerModal && onOpenFlyerModal('hub')}
-                className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 group cursor-pointer ring-1 ring-blue-100"
+                onClick={() => onOpenFlyerModal && onOpenFlyerModal(heroBanners[activeHeroBanner].id)}
+                className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-950 group cursor-pointer ring-1 ring-blue-100"
               >
                 <img
-                  src="/images/silt-learning-hub-flyer.jpg"
-                  alt="Official SAMUH INDIA Learning & Training Hub Announcement Flyer - Classroom Rental, Study Centre, Coworking Space, For Trainers"
-                  className="w-full h-[400px] sm:h-[460px] object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  src={heroBanners[activeHeroBanner].src}
+                  alt={heroBanners[activeHeroBanner].alt}
+                  className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-[1.02]"
                   loading="eager"
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-950/80 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-950/85 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
 
                 {/* Bottom Overlay with Lightbox Trigger */}
-                <div className="absolute bottom-4 inset-x-4 flex items-center justify-between gap-2 p-3 rounded-2xl bg-white/95 backdrop-blur-md border border-slate-200 shadow-md">
-                  <div className="text-left">
+                <div className="p-3 sm:p-3.5 bg-white border-t border-slate-200 flex items-center justify-between gap-2 text-left">
+                  <div className="min-w-0">
                     <span className="text-[10px] font-black uppercase tracking-wider text-blue-800 block">
-                      Official Launch Announcement
+                      {heroBanners[activeHeroBanner].tag} • Official Infographic
                     </span>
-                    <h3 className="text-xs sm:text-sm font-black text-slate-900">
-                      SAMUH INDIA Hub • Malakpet
+                    <h3 className="text-xs sm:text-sm font-black text-slate-900 truncate">
+                      {heroBanners[activeHeroBanner].title}
                     </h3>
                   </div>
 
@@ -278,7 +316,7 @@ export default function Hero({ onOpenFlyerModal }) {
                     type="button"
                     onClick={(e) => {
                       e.stopPropagation();
-                      onOpenFlyerModal && onOpenFlyerModal('hub');
+                      onOpenFlyerModal && onOpenFlyerModal(heroBanners[activeHeroBanner].id);
                     }}
                     className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-black bg-amber-400 hover:bg-amber-300 text-slate-950 shadow-sm transition-all shrink-0 cursor-pointer"
                   >

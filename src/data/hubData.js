@@ -55,6 +55,8 @@ export const businessInfo = {
   socials: {
     instagram: "https://www.instagram.com/silt.hub?utm_source=qr&exln=MXhxMXFkZXE5Y3pmdw==",
     instagramHandle: "@silt.hub",
+    facebook: "https://www.facebook.com/share/1ZCNWsgwE2/",
+    facebookHandle: "SILT Hub Facebook",
     x: "https://x.com/ProfSMH",
     xHandle: "@ProfSMH",
   },
@@ -415,6 +417,22 @@ export const centerPhotos = [
     tag: "Official Flyer",
     isFlyer: true,
     flyerType: "hub"
+  },
+  {
+    src: "/images/silt-comprehensive-counselling-banner.jpg",
+    alt: "SAMUH INDIA Learning & Training Hub - Tuition Classes (9th to PG), Career Counselling, Study Centre, Incubation Cell",
+    caption: "Academic Tuition & Career Counselling Official Banner",
+    tag: "Tuition & Career",
+    isFlyer: true,
+    flyerType: "counselling"
+  },
+  {
+    src: "/images/silt-comprehensive-coworking-banner.jpg",
+    alt: "SAMUH INDIA Learning & Training Hub - Classroom Rental, Coworking Space, Study Centre, Incubation Cell, Tuition Classes",
+    caption: "Classroom Rental & Coworking Space Official Banner",
+    tag: "Campus & Coworking",
+    isFlyer: true,
+    flyerType: "coworking"
   },
   {
     src: "/images/silt-learning-hub-banner.jpg",
