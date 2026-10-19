@@ -2,6 +2,7 @@ import React from 'react';
 import { Mail, MessageSquare, MapPin, Clock, Star, ExternalLink, Sparkles } from 'lucide-react';
 import {
   businessInfo,
+  founderInfo,
   STUDENT_REGISTRATION_FORM_URL,
   FACULTY_REGISTRATION_FORM_URL,
   CLASSROOM_RENTAL_FORM_URL,
@@ -115,18 +116,18 @@ export default function Footer({ onOpenFlyerModal }) {
                 <span>Instagram</span>
               </a>
 
-              {/* X */}
+              {/* Founder's X (Twitter) */}
               <a
-                href={businessInfo.socials.x}
+                href={founderInfo.xProfile}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold text-slate-200 bg-white/10 hover:bg-white/20 border border-white/20 transition-colors"
-                title="X @ProfSMH"
+                title="Founder Prof. Syed Mujahed Hussaini on X (@ProfSMH)"
               >
                 <svg className="w-3 h-3" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                 </svg>
-                <span>X Profile</span>
+                <span>Founder on X</span>
               </a>
             </div>
           </div>

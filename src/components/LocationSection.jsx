@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import {
   businessInfo,
+  founderInfo,
   GOOGLE_MAPS_URL,
   GOOGLE_MAPS_SHORT_URL,
   GOOGLE_MAPS_DIRECTIONS_URL,
@@ -215,13 +216,13 @@ export default function LocationSection() {
                 </div>
               </div>
 
-              {/* Official Social Media Profiles (Instagram & X) */}
+              {/* Official Social Media Profiles (SILT Hub Facebook & Instagram) */}
               <div className="p-4 rounded-2xl bg-slate-100 border border-slate-200 space-y-3">
                 <span className="text-[11px] font-black uppercase tracking-wider text-slate-700 block">
                   Follow SILT Hub on Social Media
                 </span>
 
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                   {/* Facebook */}
                   <a
                     href={businessInfo.socials.facebook}
@@ -237,7 +238,7 @@ export default function LocationSection() {
                     </div>
                     <div className="text-left min-w-0">
                       <span className="text-xs font-bold text-slate-900 block leading-tight">Facebook</span>
-                      <span className="text-[10px] text-blue-600 font-semibold truncate block">SILT Hub Page</span>
+                      <span className="text-[10px] text-blue-600 font-semibold truncate block">SILT Hub Official Page ↗</span>
                     </div>
                   </a>
 
@@ -247,6 +248,7 @@ export default function LocationSection() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2.5 p-2.5 rounded-xl bg-white border border-slate-200 hover:border-pink-400 hover:shadow-sm transition-all group"
+                    title="Follow SILT Hub on Instagram"
                   >
                     <div className="w-8 h-8 rounded-lg bg-pink-50 text-pink-600 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                       <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -257,26 +259,27 @@ export default function LocationSection() {
                     </div>
                     <div className="text-left min-w-0">
                       <span className="text-xs font-bold text-slate-900 block leading-tight">Instagram</span>
-                      <span className="text-[10px] text-pink-600 font-semibold truncate block">{businessInfo.socials.instagramHandle}</span>
+                      <span className="text-[10px] text-pink-600 font-semibold truncate block">{businessInfo.socials.instagramHandle} ↗</span>
                     </div>
                   </a>
+                </div>
 
-                  {/* X (Twitter) */}
+                {/* Founder's Social Media */}
+                <div className="pt-2.5 border-t border-slate-200/80 flex items-center justify-between gap-2 text-xs">
+                  <span className="text-[11px] font-semibold text-slate-600">
+                    Founder's Social Media:
+                  </span>
                   <a
-                    href={businessInfo.socials.x}
+                    href={founderInfo.xProfile}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2.5 p-2.5 rounded-xl bg-white border border-slate-200 hover:border-slate-800 hover:shadow-sm transition-all group"
+                    className="inline-flex items-center gap-1.5 font-bold text-slate-900 hover:text-blue-700 transition-colors group"
+                    title="Follow Founder Prof. Syed Mujahed Hussaini on X (Twitter)"
                   >
-                    <div className="w-8 h-8 rounded-lg bg-slate-900 text-white flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
-                      <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                      </svg>
-                    </div>
-                    <div className="text-left min-w-0">
-                      <span className="text-xs font-bold text-slate-900 block leading-tight">X Profile</span>
-                      <span className="text-[10px] text-slate-700 font-semibold truncate block">{businessInfo.socials.xHandle}</span>
-                    </div>
+                    <svg className="w-3.5 h-3.5 fill-current shrink-0" viewBox="0 0 24 24">
+                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                    <span>Prof. S. M. Hussaini on X ({founderInfo.xHandle}) ↗</span>
                   </a>
                 </div>
               </div>
