@@ -58,7 +58,11 @@ export default function StudentSegment() {
             Students Needs, Offerings &amp; Registrations
           </h2>
 
-          <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
+          <p className="mt-3 text-sm sm:text-base font-black text-blue-700 tracking-wide">
+            Struggling to Understand Concepts? You’re Not Alone!
+          </p>
+
+          <p className="mt-2 text-base sm:text-lg text-slate-600 leading-relaxed">
             Empowering every learner with conceptual clarity, board exam excellence, competitive entrance ranks, and job-ready skills under expert faculty.
           </p>
         </div>

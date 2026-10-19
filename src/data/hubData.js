@@ -28,6 +28,8 @@ export const businessInfo = {
   acronym: "SILT",
   teluguName: "సమూహ ఇండియా లెర్నింగ్ & ట్రైనింగ్ హబ్",
   trustName: "TALEEM-E-ROZGAR EDUCATIONAL & CHARITABLE TRUST",
+  aboutHub:
+    "SAMUH INDIA Learning & Training Hub, a premier Education Centre, offers traditional classroom teaching, skill training, and career counseling for a holistic learning experience. Our expert teachers and trainers provide personalized coaching for students seeking subject knowledge, computer training, professional skills, and more. We have expertise from High School to PG & Ph.D. levels. We offer our classrooms and infrastructure on rental basis to fulfill the needs of teachers for effective teaching. As a top-notch education centre in Hyderabad, we empower individuals to achieve their academic and professional goals. Visit us today and discover a new way of learning. We are very close to New Market Metro Station Exit-D in Malakpet Hyderabad, Telangana!",
   tagline: "Learn | Train | Grow | Build Your Future",
   motto: "Better Teachers, Brighter Futures!",
   heroPunchline: "Learn Better, Score Higher!",

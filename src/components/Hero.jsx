@@ -44,24 +44,49 @@ export default function Hero({ onOpenFlyerModal }) {
               </div>
             </div>
 
-            {/* Motivational Slogan Tag */}
+            {/* About Our Hub Tag */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-blue-900 text-amber-300 text-xs font-black uppercase tracking-wider shadow-sm">
               <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-              <span>{businessInfo.motto} • {businessInfo.heroPunchline}</span>
+              <span>About Our Hub • Premier Education Centre</span>
             </div>
 
-            {/* Flyer Hook Main Headline */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-black text-blue-950 tracking-tight leading-[1.15]">
-              Struggling to Understand Concepts?{' '}
+            {/* Main Headline */}
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[44px] font-black text-blue-950 tracking-tight leading-[1.15]">
+              SAMUH INDIA{' '}
               <span className="text-blue-600 block sm:inline">
-                You’re Not Alone!
+                Learning &amp; Training Hub
               </span>
             </h1>
 
-            {/* Flyer Supporting Copy */}
-            <p className="text-base sm:text-lg text-slate-700 leading-relaxed font-medium max-w-2xl">
-              Get the right guidance from experienced <strong className="text-blue-950 font-bold">Teachers, Instructors, and Subject Experts</strong> at <strong className="text-blue-700 font-extrabold">SILT Hub</strong> — for better understanding, higher scores, and a successful career!
-            </p>
+            {/* About Our Hub Narrative */}
+            <div className="p-5 sm:p-6 rounded-3xl bg-white/95 border border-blue-200/90 shadow-md space-y-3.5 text-slate-700 text-sm sm:text-base leading-relaxed font-medium max-w-2xl text-left">
+              <p>
+                <strong className="text-blue-950 font-black">SAMUH INDIA Learning &amp; Training Hub</strong>, a premier Education Centre, offers traditional classroom teaching, skill training, and career counseling for a holistic learning experience. Our expert teachers and trainers provide personalized coaching for students seeking subject knowledge, computer training, professional skills, and more. We have expertise from <strong className="text-blue-900 font-bold">High School to PG &amp; Ph.D. levels</strong>.
+              </p>
+              <p className="text-slate-600">
+                We offer our <strong className="text-blue-950 font-bold">classrooms and infrastructure on rental basis</strong> to fulfill the needs of teachers for effective teaching. As a top-notch education centre in Hyderabad, we empower individuals to achieve their academic and professional goals. Visit us today and discover a new way of learning. We are very close to <strong className="text-blue-950 font-bold">New Market Metro Station Exit-D</strong> in Malakpet, Hyderabad, Telangana!
+              </p>
+
+              {/* Quick Pillars Highlight Tags from Text */}
+              <div className="pt-2 border-t border-slate-100 flex flex-wrap gap-2 text-xs font-bold text-slate-700">
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-blue-50 text-blue-900 border border-blue-200/60">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-blue-600" />
+                  <span>Classroom Teaching &amp; Coaching</span>
+                </span>
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-amber-50 text-amber-900 border border-amber-200/60">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-amber-600" />
+                  <span>Computer &amp; Professional Skills</span>
+                </span>
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-50 text-emerald-900 border border-emerald-200/60">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+                  <span>High School to PG &amp; Ph.D.</span>
+                </span>
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-purple-50 text-purple-900 border border-purple-200/60">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-purple-600" />
+                  <span>Classrooms on Rental Basis</span>
+                </span>
+              </div>
+            </div>
 
             {/* Skill Training & Placement Strip (Sunny Gold & Royal Blue) */}
             <div className="p-3.5 sm:p-4 rounded-2xl bg-gradient-to-r from-amber-400 via-amber-300 to-yellow-400 text-slate-950 shadow-md border border-amber-300 flex flex-col sm:flex-row items-center justify-between gap-3 text-left">
