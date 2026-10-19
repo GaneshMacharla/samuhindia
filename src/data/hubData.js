@@ -472,6 +472,8 @@ export const founderInfo = {
   shortName: "Dr. S. M. Hussaini",
   title: "Founder & Director, SAMUH INDIA Learning & Training (SILT) Hub",
   designation: "Distinguished Engineer, Researcher, Academician & Entrepreneur",
+  image: "/images/prof-syed-mujahed-hussaini.jpg",
+  imageAlt: "Prof. Syed Mujahed Hussaini - Founder & Director, SAMUH INDIA Learning & Training (SILT) Hub",
   experienceYears: "21+",
   experienceSummary: "Over 21 years of experience spanning industrial engineering, R&D, project management, and higher education",
   xProfile: "https://x.com/ProfSMH",

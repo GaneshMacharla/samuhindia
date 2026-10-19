@@ -89,10 +89,12 @@ export default function Hero({ onOpenFlyerModal }) {
 
               {/* Founder Leadership Callout */}
               <div className="pt-2.5 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
-                <div className="flex items-center gap-2 text-slate-700">
-                  <span className="w-5 h-5 rounded-md bg-blue-900 text-amber-300 flex items-center justify-center font-bold text-[10px] shrink-0">
-                    SMH
-                  </span>
+                <div className="flex items-center gap-2.5 text-slate-700">
+                  <img
+                    src="/images/prof-syed-mujahed-hussaini.jpg"
+                    alt="Prof. Syed Mujahed Hussaini"
+                    className="w-7 h-7 rounded-full object-cover object-top border-2 border-amber-400 shadow-xs shrink-0"
+                  />
                   <span>
                     Founded by <strong className="text-blue-950 font-bold">Prof. Syed Mujahed Hussaini</strong> (Ph.D. BITS Pilani • Ex-ISRO)
                   </span>

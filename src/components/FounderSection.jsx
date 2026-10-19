@@ -48,10 +48,18 @@ export default function FounderSection() {
             <div className="relative flex flex-col md:flex-row md:items-center justify-between gap-6">
               
               <div className="flex items-start sm:items-center gap-4 sm:gap-6">
-                {/* Executive Crest / Monogram */}
-                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-3xl bg-gradient-to-br from-amber-400 to-yellow-500 text-slate-950 flex flex-col items-center justify-center font-black shadow-lg shadow-amber-400/20 shrink-0 border-2 border-amber-300">
-                  <span className="text-xl sm:text-2xl tracking-tighter">SMH</span>
-                  <span className="text-[9px] uppercase tracking-widest font-extrabold -mt-1 text-slate-800">Ph.D.</span>
+                {/* Founder Executive Portrait */}
+                <div className="relative shrink-0 group">
+                  <div className="w-24 h-28 sm:w-28 sm:h-36 md:w-32 md:h-40 rounded-2xl sm:rounded-3xl overflow-hidden border-3 sm:border-4 border-amber-400 shadow-2xl bg-slate-900 ring-4 ring-amber-400/25">
+                    <img
+                      src={founderInfo.image}
+                      alt={founderInfo.imageAlt}
+                      className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="absolute -bottom-2.5 left-1/2 -translate-x-1/2 px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-amber-400 text-slate-950 border border-amber-300 shadow-md whitespace-nowrap">
+                    Founder
+                  </div>
                 </div>
 
                 <div className="space-y-1 text-left">
