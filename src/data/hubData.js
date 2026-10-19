@@ -463,3 +463,102 @@ export const centerPhotos = [
     tag: "Verification"
   }
 ];
+
+/**
+ * Founder Profile & Vision - Prof. Syed Mujahed Hussaini (Dr. S. M. Hussaini)
+ */
+export const founderInfo = {
+  name: "Prof. Syed Mujahed Hussaini",
+  shortName: "Dr. S. M. Hussaini",
+  title: "Founder & Director, SAMUH INDIA Learning & Training (SILT) Hub",
+  designation: "Distinguished Engineer, Researcher, Academician & Entrepreneur",
+  experienceYears: "21+",
+  experienceSummary: "Over 21 years of experience spanning industrial engineering, R&D, project management, and higher education",
+  xProfile: "https://x.com/ProfSMH",
+  xHandle: "@ProfSMH",
+  degrees: [
+    {
+      degree: "Postdoctoral Research",
+      institution: "HIT, Shenzhen, China (Top 200 World Prestigious University)",
+      detail: "Postdoctoral research at Harbin Institute of Technology (HIT), Shenzhen, China (close to Hong Kong, top 200 world university)"
+    },
+    {
+      degree: "Ph.D.",
+      institution: "BITS Pilani",
+      detail: "Doctor of Philosophy from Birla Institute of Technology & Science, Pilani"
+    },
+    {
+      degree: "M.Tech.",
+      institution: "NIT Warangal",
+      detail: "Master of Technology from National Institute of Technology, Warangal"
+    },
+    {
+      degree: "B.E.",
+      institution: "Osmania University College of Engineering, Hyderabad",
+      detail: "Bachelor of Engineering from University College of Engineering, Osmania University, Hyderabad"
+    }
+  ],
+  organizations: [
+    {
+      org: "ISRO (Indian Space Research Organisation)",
+      role: "Critical space launch infrastructure & mechanical systems (Chandrayaan, GSLV Mk III)",
+      badge: "Space Technology",
+      highlight: "Chandrayaan & GSLV Mk III"
+    },
+    {
+      org: "Faiveley Transport (India & Sweden)",
+      role: "Metro train braking systems engineering and project execution",
+      badge: "Transit Systems",
+      highlight: "Metro Train Braking"
+    },
+    {
+      org: "DRDO Laboratories",
+      role: "Sponsored research projects in collaboration with leading defence research organisations",
+      badge: "Defence R&D",
+      highlight: "Defence Research Collaboration"
+    },
+    {
+      org: "BITS Pilani & Osmania / JNTUH Institutions",
+      role: "Academic leadership roles, higher education teaching, and student mentoring",
+      badge: "Higher Education",
+      highlight: "Academic Leadership"
+    },
+    {
+      org: "Ministry of Labour & Employment, Govt. of India",
+      role: "Career Counsellor under National Career Service (NCS)",
+      badge: "Govt. of India",
+      highlight: "NCS Career Counsellor"
+    }
+  ],
+  bioParagraphs: [
+    "Prof. Syed Mujahed Hussaini is a distinguished Engineer, researcher, academician, and entrepreneur with over 21 years of experience spanning industrial engineering, research and development, project management, and higher education. He holds a Ph.D. from BITS Pilani, an M.Tech. from NIT Warangal, and a B.E. from Osmania University College of Engineering, Hyderabad. He also completed postdoctoral research at HIT, Shenzhen, China close to Hong Kong, one of the top 200 prestigious universities in the world.",
+    "His professional experience includes working with the Indian Space Research Organisation (ISRO) on critical space launch infrastructure and mechanical systems like Chandrayaan and GSLV Mk III. He served with Faiveley Transport in India and Sweden on metro train braking systems. He has served in academic leadership roles at BITS Pilani and Osmania University, JNTUH-affiliated institutions, contributing to sponsored research projects in collaboration with leading defence research organisations, including DRDO laboratories.",
+    "Currently involved in academic leadership, incubation, innovation, and startup development, Prof. Hussaini is associated with the Ministry of Labour & Employment, Govt. of India as a Career Counsellor under the National Career Service (NCS). He is deeply committed to advancing technological innovation, skill development, and entrepreneurship."
+  ],
+  motivation: {
+    sectionTitle: "Motivation for SILT Hub",
+    summary:
+      "Dr. S. M. Hussaini founded Samuh India Learning & Training (SILT) Hub, an initiative dedicated to promoting education, skill development, career advancement, employability, and entrepreneurship.",
+    visionQuote:
+      "Bridge the gap between education, practical skills, employment, and entrepreneurship while creating opportunities for individuals to learn, grow, and achieve their professional aspirations.",
+    points: [
+      {
+        title: "Integrated Learning Platform",
+        desc: "Driven by a vision to create accessible learning and professional development opportunities, bringing together educators, trainers, students, aspiring professionals, and entrepreneurs."
+      },
+      {
+        title: "Quality Academics & Exam Prep",
+        desc: "Facilitates quality classroom coaching, competitive examination preparation, and concept clarity across high school to higher studies."
+      },
+      {
+        title: "Employability & Career Counseling",
+        desc: "Placement-oriented skill development and certified career counseling under Government of India National Career Service (NCS) frameworks."
+      },
+      {
+        title: "Classrooms & Startup Incubation",
+        desc: "Provides well-equipped classrooms, modern study facilities, collaborative opportunities for trainers and educational institutions through flexible models, and startup incubation support."
+      }
+    ]
+  }
+};
+

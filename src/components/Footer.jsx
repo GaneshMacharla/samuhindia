@@ -38,6 +38,11 @@ export default function Footer({ onOpenFlyerModal }) {
               "{businessInfo.tagline}" — {businessInfo.supportingText}
             </p>
 
+            {/* Founder Note */}
+            <p className="text-xs text-blue-200">
+              Founded by <strong className="text-amber-300">Prof. Syed Mujahed Hussaini</strong> (Ph.D. BITS Pilani, Postdoc HIT Shenzhen, Ex-ISRO)
+            </p>
+
             {/* Slogan Pill */}
             <div className="text-xs font-semibold text-amber-300 flex items-center gap-2">
               <Sparkles className="w-4 h-4 text-amber-400" />
@@ -145,6 +150,11 @@ export default function Footer({ onOpenFlyerModal }) {
                 <a href={CLASSROOM_RENTAL_FORM_URL} target="_blank" rel="noopener noreferrer" className="text-emerald-300 hover:underline flex items-center gap-1 font-semibold">
                   <span>Classroom Rental Form</span>
                   <ExternalLink className="w-3 h-3" />
+                </a>
+              </li>
+              <li>
+                <a href="#founder" className="hover:text-amber-300 transition-colors font-bold text-white flex items-center gap-1">
+                  <span>Founder Profile &amp; Vision</span>
                 </a>
               </li>
               <li className="pt-2 border-t border-blue-900">

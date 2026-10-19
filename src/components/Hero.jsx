@@ -86,6 +86,24 @@ export default function Hero({ onOpenFlyerModal }) {
                   <span>Classrooms on Rental Basis</span>
                 </span>
               </div>
+
+              {/* Founder Leadership Callout */}
+              <div className="pt-2.5 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
+                <div className="flex items-center gap-2 text-slate-700">
+                  <span className="w-5 h-5 rounded-md bg-blue-900 text-amber-300 flex items-center justify-center font-bold text-[10px] shrink-0">
+                    SMH
+                  </span>
+                  <span>
+                    Founded by <strong className="text-blue-950 font-bold">Prof. Syed Mujahed Hussaini</strong> (Ph.D. BITS Pilani • Ex-ISRO)
+                  </span>
+                </div>
+                <a
+                  href="#founder"
+                  className="font-bold text-blue-700 hover:text-blue-950 hover:underline flex items-center gap-1 shrink-0"
+                >
+                  <span>Founder Profile &amp; Vision →</span>
+                </a>
+              </div>
             </div>
 
             {/* Skill Training & Placement Strip (Sunny Gold & Royal Blue) */}

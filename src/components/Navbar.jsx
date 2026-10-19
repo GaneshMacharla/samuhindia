@@ -18,6 +18,7 @@ export default function Navbar({ onOpenFlyerModal }) {
     { name: 'I. Students', href: '#students' },
     { name: 'II. Faculty', href: '#faculty' },
     { name: 'III. Classrooms & Campus', href: '#classrooms' },
+    { name: 'Founder & Vision', href: '#founder' },
     { name: 'Contact & Location', href: '#contact' },
   ];
 

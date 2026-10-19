@@ -7,6 +7,7 @@ import TrustStrip from './components/TrustStrip';
 import StudentSegment from './components/StudentSegment';
 import FacultyMentorSection from './components/FacultyMentorSection';
 import ClassroomRentalSection from './components/ClassroomRentalSection';
+import FounderSection from './components/FounderSection';
 import ReviewsSection from './components/ReviewsSection';
 import LocationSection from './components/LocationSection';
 import Footer from './components/Footer';
@@ -53,7 +54,10 @@ export default function App() {
         {/* 6. SEGMENT III: Classrooms (10-30 Capacity, 120-150 Slot Capacity, Lab, Pantry, Washrooms) */}
         <ClassroomRentalSection onOpenFlyerModal={(tab = 'classroom') => handleOpenFlyerModal(tab)} />
 
-        {/* 7. Verified Google Reviews */}
+        {/* 7. About the Founder & Vision (Prof. Syed Mujahed Hussaini) */}
+        <FounderSection />
+
+        {/* 8. Verified Google Reviews */}
         <ReviewsSection />
 
         {/* 8. Contact Details with Address, Email, WhatsApp, Instagram & X Profiles, and Google Maps */}
