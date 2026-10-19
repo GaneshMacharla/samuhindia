@@ -20,9 +20,13 @@ export default function Footer({ onOpenFlyerModal }) {
           
           {/* Brand Info & Mission */}
           <div className="lg:col-span-5 space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-11 h-11 rounded-2xl bg-amber-400 flex items-center justify-center text-slate-950 font-black text-lg shadow-lg border border-amber-300">
-                SILT
+            <div className="flex items-center gap-3.5">
+              <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-amber-400 shadow-lg bg-white p-0.5 shrink-0">
+                <img
+                  src={businessInfo.logo}
+                  alt={businessInfo.logoAlt}
+                  className="w-full h-full object-contain rounded-full"
+                />
               </div>
               <div>
                 <span className="font-black text-lg text-white tracking-tight block">

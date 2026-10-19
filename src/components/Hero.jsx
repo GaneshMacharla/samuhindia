@@ -44,19 +44,32 @@ export default function Hero({ onOpenFlyerModal }) {
               </div>
             </div>
 
-            {/* About Our Hub Tag */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-blue-900 text-amber-300 text-xs font-black uppercase tracking-wider shadow-sm">
-              <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-              <span>About Our Hub • Premier Education Centre</span>
-            </div>
+            {/* Brand Logo & Headline Group */}
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-22 lg:h-22 rounded-full overflow-hidden border-2 sm:border-3 border-blue-900 shadow-xl bg-white p-1 shrink-0 group">
+                <img
+                  src={businessInfo.logo}
+                  alt={businessInfo.logoAlt}
+                  className="w-full h-full object-contain rounded-full transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
 
-            {/* Main Headline */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[44px] font-black text-blue-950 tracking-tight leading-[1.15]">
-              SAMUH INDIA{' '}
-              <span className="text-blue-600 block sm:inline">
-                Learning &amp; Training Hub
-              </span>
-            </h1>
+              <div className="space-y-1.5 text-left">
+                {/* About Our Hub Tag */}
+                <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-xl bg-blue-900 text-amber-300 text-xs font-black uppercase tracking-wider shadow-sm">
+                  <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+                  <span>About Our Hub • Premier Education Centre</span>
+                </div>
+
+                {/* Main Headline */}
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[44px] font-black text-blue-950 tracking-tight leading-[1.15]">
+                  SAMUH INDIA{' '}
+                  <span className="text-blue-600 block sm:inline">
+                    Learning &amp; Training Hub
+                  </span>
+                </h1>
+              </div>
+            </div>
 
             {/* About Our Hub Narrative */}
             <div className="p-5 sm:p-6 rounded-3xl bg-white/95 border border-blue-200/90 shadow-md space-y-3.5 text-slate-700 text-sm sm:text-base leading-relaxed font-medium max-w-2xl text-left">

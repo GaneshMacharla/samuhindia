@@ -26,6 +26,8 @@ export const businessInfo = {
   shortName: "SILT Hub",
   brandName: "SAMUH INDIA",
   acronym: "SILT",
+  logo: "/images/silt-logo.jpg",
+  logoAlt: "Samuh India Learning & Training (SILT) Hub Official Logo",
   teluguName: "సమూహ ఇండియా లెర్నింగ్ & ట్రైనింగ్ హబ్",
   trustName: "TALEEM-E-ROZGAR EDUCATIONAL & CHARITABLE TRUST",
   aboutHub:
